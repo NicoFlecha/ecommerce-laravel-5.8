@@ -1,0 +1,59 @@
+div.relleno {
+  height: 15vh;
+}
+
+h1 {
+  text-align: center;
+  color: #E47F6B;
+}
+
+form.login {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+div.contenedorFormulario {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+form.login label {
+  margin-top: 10px;
+  font-size: 1.05em;
+  color: #252624;
+}
+
+form.login input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+form.login div.paraIngresar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+form.login div.paraIngresar input.ingresar {
+  width: 90px;
+  height: 40px;
+  border: none;
+  background-color: #E47F6B;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.05em;
+}
+
+form.login div.paraIngresar input.ingresar:hover {
+  background-color: #D53717;
+}
+
+@media only screen and (min-width: 1000px) {
+  div.contenedorFormulario {
+    width: 50%;
+  }

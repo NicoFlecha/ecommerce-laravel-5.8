@@ -1,0 +1,88 @@
+div.relleno {
+  height: 15vh;
+}
+
+h1 {
+  text-align: center;
+  color: #E47F6B;
+}
+
+div.contenedorFormulario {
+  background-color: white;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+form.registro {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+form div.inputForm {
+  margin-top: 10px;
+}
+
+form.registro label {
+  margin-top: 10px;
+  font-size: 1.05em;
+  color: #252624;
+}
+
+form.registro input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+form.registro div.paraEnviar {
+  width: 100%;
+  text-align: right;
+}
+
+form.registro div.paraEnviar input.enviar {
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: #E47F6B;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.05em;
+}
+
+form.registro div.paraEnviar input.enviar:hover {
+  background-color: #D53717;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 700px) {
+  form.registro {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  form div.inputForm {
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  form div.inputForm.email {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  div.contenedorFormulario {
+    width: 50%;
+  }
+}

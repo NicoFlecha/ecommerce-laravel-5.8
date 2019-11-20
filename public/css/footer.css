@@ -1,0 +1,39 @@
+footer {
+  background-color: white;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px rgba(228,127,107,0.2) solid;
+  padding: 20px 10px;
+}
+
+footer div.redes {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer div.redes a {
+  font-size: 1.5em;
+  color: #E47F6B;
+}
+
+footer div.redes a:hover {
+  color: #D53717;
+}
+
+footer div.legales {
+  color: #E47F6B;
+  font-size: 1.1em;
+}
+
+@media only screen and (min-width: 700px) {
+  footer {
+    padding: 20px 20px;
+  }
+  footer div.redes {
+    width: 15%;
+  }
+}

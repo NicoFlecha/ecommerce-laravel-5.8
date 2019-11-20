@@ -1,0 +1,106 @@
+header {
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  width: 100%;
+}
+
+nav.menuHeader {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.menuHeader div.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em;
+  align-items: center;
+}
+
+nav.menuHeader div.logo .logoImg {
+  width: 10%;
+  max-width: 22px;
+}
+
+nav.menuHeader div.logo img {
+  width: 100%;
+}
+
+nav.menuHeader div.logo i{
+  color: #E47F6B;
+}
+
+nav.menuHeader div.enlaces {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav.menuHeader div.enlaces a {
+  color: #E47F6B;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
+}
+
+
+nav.menuHeader div.enlaces a:hover {
+  color: #D53717;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+nav.menuHeader div.enlaces a.carrito {
+  font-size: 1.3em;
+}
+
+nav.menuHeader div.enlaces a.carrito:hover {
+  font-size: 1.4em;
+}
+
+nav.menuHeader div.enlaces a i {
+  margin-right: 5px;
+}
+
+nav.menuHeader div.enlaces button {
+  box-shadow: none;
+  color: #E47F6B;
+}
+
+/* Animación del Header */
+.headroom {
+  transition: transform 0.3s ease;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+/* Media Queries */
+@media only screen and (min-width: 769px) {
+  nav.menuHeader {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav.menuHeader .logo {
+    width: 10%!important;
+  }
+  nav.menuHeader .logo img {
+    min-width: 25px;
+  }
+
+  nav.menuHeader .logo #btn-menu {
+    display: none;
+  }
+}

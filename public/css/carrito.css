@@ -1,0 +1,37 @@
+div.relleno {
+  height: 15vh;
+}
+
+div.contenedorCarrito {
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 20px;
+  /* background-color: #F9F9F9AA; */
+}
+
+div.contenedorCarrito h2 {
+  text-align: center;
+  color: #E47F6B66;
+}
+
+div.contenedorCarrito div.imgCarrito {
+  text-align: center;
+  color: #E47F6B66;
+}
+
+div.contenedorCarrito div.imgCarrito i {
+  font-size: 10em;
+}
+
+@media only screen and (min-width: 730px) {
+  div.contenedorCarrito {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  div.contenedorCarrito {
+    width: 65%;
+  }
+}
