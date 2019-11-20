@@ -24,8 +24,13 @@
         </div>
       </div>
       <a href="/faq"><i class="far fa-question-circle"></i> F.A.Q</a>
+      @guest
       <a href="/login"><i class="fas fa-user"></i> Ingresar</a>
       <a href="/register"><i class="fas fa-user-plus"></i> Registrarse</a>
+      @endguest
+      @if (Auth::user())
+        {{Auth::user()->name}} {{Auth::user()->apellido}}
+      @endif
       <a class="carrito" href="/carrito"><i class="fas fa-shopping-cart"></i></a>
     </div>
   </nav>
