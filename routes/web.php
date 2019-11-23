@@ -29,10 +29,13 @@ Route::get('/carrito', function () {
     return view('carrito');
 });
 
+Route::get('/perfil', 'UserController@mostrarPerfil');
+
 Route::get('/categorias', 'CategoriaController@mostrar');
 
 Route::get('/categorias/editar', 'CategoriaController@formulario');
 
 Route::get('/categorias/editar/{id}', 'CategoriaController@editar');
+
 
 Auth::routes();

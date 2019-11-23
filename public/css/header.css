@@ -51,10 +51,18 @@ nav.menuHeader div.enlaces a {
   padding: 1em;
 }
 
+button.btn.dropdown-toggle.dropdown-toggle-split {
+  margin-left: -10px;
+  padding: 0;
+}
+
+/* button.btn.dropdown-toggle.dropdown-toggle-split:hover {
+  font-weight: bold;
+} */
 
 nav.menuHeader div.enlaces a:hover {
   color: #D53717;
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
   font-weight: bold;
 }
 nav.menuHeader div.enlaces a.carrito {
@@ -62,7 +70,7 @@ nav.menuHeader div.enlaces a.carrito {
 }
 
 nav.menuHeader div.enlaces a.carrito:hover {
-  font-size: 1.4em;
+  /* font-size: 1.4em; */
 }
 
 nav.menuHeader div.enlaces a i {
@@ -74,6 +82,9 @@ nav.menuHeader div.enlaces button {
   color: #E47F6B;
 }
 
+nav.menuHeader button.dropdown-item.logout:hover {
+  font-weight: bold;
+}
 /* Animación del Header */
 .headroom {
   transition: transform 0.3s ease;

@@ -30,14 +30,16 @@
       @endguest
       @if (Auth::user())
         <div class="btn-group">
-          <a href="/">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</a>
+          <a href="/perfil">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</a>
           <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"  aria-expanded="false">
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <div class="dropdown-menu">
             <form class="" action="/logout" method="post">
               @csrf
-              <input class="dropdown-item" type="submit" value="Salir">
+              <button class="dropdown-item logout" type="submit" name="button">
+                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+              </button>
             </form>
           </div>
         </div>
