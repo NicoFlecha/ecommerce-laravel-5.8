@@ -29,7 +29,18 @@
       <a href="/register"><i class="fas fa-user-plus"></i> Registrarse</a>
       @endguest
       @if (Auth::user())
-        {{Auth::user()->name}} {{Auth::user()->apellido}}
+        <div class="btn-group">
+          <a href="/">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</a>
+          <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"  aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu">
+            <form class="" action="/logout" method="post">
+              @csrf
+              <input class="dropdown-item" type="submit" value="Salir">
+            </form>
+          </div>
+        </div>
       @endif
       <a class="carrito" href="/carrito"><i class="fas fa-shopping-cart"></i></a>
     </div>

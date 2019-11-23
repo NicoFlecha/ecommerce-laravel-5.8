@@ -15,37 +15,47 @@
       @csrf
       <div class="inputForm">
         <label for="nombre">Nombre:</label>
-        <input type="text" name="name" id="nombre" placeholder="Roberto" value="">
+        <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" id="nombre" placeholder="Roberto" value="{{ old('name') }}">
         @error('name')
-          {{$message}}
+          <div class="invalid-feedback">
+            {{$message}}
+          </div>
         @enderror
       </div>
       <div class="inputForm">
         <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" id="apellido" placeholder="Sarasa" value="">
+        <input class="form-control @error('name') is-invalid @enderror" type="text" name="apellido" id="apellido" placeholder="Sarasa" value="{{ old('apellido') }}">
         @error('name')
-          {{$message}}
+          <div class="invalid-feedback">
+            {{$message}}
+          </div>
         @enderror
       </div>
       <div class="inputForm email">
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="sarasa@sarasa.com" value="">
+        <input class="form-control @error('email') is-invalid @enderror" type="email" name="email" id="email" placeholder="sarasa@sarasa.com" value="{{ old('email') }}">
         @error('email')
-          {{$message}}
+          <div class="invalid-feedback">
+            {{$message}}
+          </div>
         @enderror
       </div>
       <div class="inputForm">
         <label for="password">Contraseña:</label>
-        <input type="password" name="password" id="password">
+        <input class="form-control @error('password') is-invalid @enderror" type="password" name="password" id="password">
         @error('password')
-          {{$message}}
+          <div class="invalid-feedback">
+            {{$message}}
+          </div>
         @enderror
       </div>
       <div class="inputForm">
         <label for="rePassword">Confirmar Contraseña:</label>
-        <input type="password" name="password_confirmation" id="rePassword">
+        <input class="form-control @error('password') is-invalid @enderror" type="password" name="password_confirmation" id="rePassword">
         @error('password')
-          {{$message}}
+          <div class="invalid-feedback">
+            {{$message}}
+          </div>
         @enderror
       </div>
       <div class="paraEnviar">

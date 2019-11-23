@@ -15,14 +15,18 @@
     <form class="login" action="/login" method="post">
       @csrf
       <label for="user">Email ó Usuario:</label>
-      <input type="text" name="email" id="user" placeholder="sarasa" value="">
-      @error('email')
-        {{$message}}
-      @enderror
+      <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" id="user" placeholder="sarasa" value="{{ old('email') }}">
+        @error('email')
+          <div class="invalid-feedback">
+            {{$message}}
+          </div>
+        @enderror
       <label for="password">Contraseña:</label>
-      <input type="password" name="password" id="password">
+      <input class="form-control @error('password') is-invalid @enderror" type="password" name="password" id="password">
       @error('password')
-        {{$message}}
+        <div class="invalid-feedback">
+          {{$message}}
+        </div>
       @enderror
       <div class="paraIngresar">
         <input class="ingresar" type="submit" value="Ingresar">

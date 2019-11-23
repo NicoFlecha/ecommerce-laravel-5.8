@@ -22,7 +22,7 @@ Categorias
         </div>
       </a>
     @empty
-      <p>No hay marcas</p>
+      <p>No hay Categorias</p>
     @endforelse
     <div class="editar">
       <a class="editar" href="/categorias">Volver</a>
