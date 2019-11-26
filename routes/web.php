@@ -33,15 +33,15 @@ Route::get('/perfil', 'UserController@mostrarPerfil');
 
 Route::get('/categorias', 'CategoriaController@mostrar');
 
-Route::get('/categorias/editar', 'CategoriaController@elegir');
+Route::get('/categorias/editar', 'CategoriaController@elegir')->middleware('admin');
 
-Route::get('/categorias/editar/{id}', 'CategoriaController@editar');
+Route::get('/categorias/editar/{id}', 'CategoriaController@editar')->middleware('admin');
 
-Route::get('/categorias/agregar', 'CategoriaController@agregar');
+Route::get('/categorias/agregar', 'CategoriaController@agregar')->middleware('admin');
 
-Route::post('/categorias/editar', 'CategoriaController@guardar');
+Route::post('/categorias/editar', 'CategoriaController@guardar')->middleware('admin');
 
-Route::post('/categorias/eliminar', 'CategoriaController@eliminar');
+Route::post('/categorias/eliminar', 'CategoriaController@eliminar')->middleware('admin');
 
 
 Auth::routes();
