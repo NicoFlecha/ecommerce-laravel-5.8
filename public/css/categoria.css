@@ -62,6 +62,11 @@ a.editar {
   border-radius: 15px;
 }
 
+h3 {
+  color: #E47F6B;
+  line-height: 80px;
+}
+
 @media only screen and (min-width: 425px) {
   a.categoria {
     width: 30%;
@@ -75,5 +80,16 @@ a.editar {
 
   a.categoria {
     width: 20%;
+  }
+
+  div.botones-edicion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  div.botones-edicion div {
+    width: auto;
+    padding: 20px;
   }
 }

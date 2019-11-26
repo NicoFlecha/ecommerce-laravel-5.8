@@ -28,9 +28,21 @@ form.editar label {
 
 div.editar {
   display: flex;
-  width: 100%;
+  flex-direction: row;
+  width: auto;
   justify-content: center;
-  margin-top: 10px
+  margin-top: 10px;
+  padding: 20px;
+}
+
+input.editar {
+  font-weight: bold;
+  color: white;
+  background-color: #E47F6B;
+  padding: 15px;
+  border-radius: 15px;
+  /* width: 15%; */
+  text-align: center;
 }
 
 a.editar {
@@ -39,8 +51,36 @@ a.editar {
   background-color: #E47F6B;
   padding: 15px;
   border-radius: 15px;
-  width: 35%;
   text-align: center;
+}
+
+form input.no-mostrar {
+  display: none;
+}
+
+div.botones-edicion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+form.eliminar {
+  width: 100%;
+  text-align: center;
+}
+
+form.eliminar input {
+  font-weight: bold;
+  color: white;
+  background-color: #AF2B2B;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  border: none;
+}
+
+form.eliminar input:hover {
+  background-color: #AF1515;  
 }
 
 @media only screen and (min-width: 768px) {

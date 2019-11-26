@@ -33,9 +33,15 @@ Route::get('/perfil', 'UserController@mostrarPerfil');
 
 Route::get('/categorias', 'CategoriaController@mostrar');
 
-Route::get('/categorias/editar', 'CategoriaController@formulario');
+Route::get('/categorias/editar', 'CategoriaController@elegir');
 
 Route::get('/categorias/editar/{id}', 'CategoriaController@editar');
+
+Route::get('/categorias/agregar', 'CategoriaController@agregar');
+
+Route::post('/categorias/editar', 'CategoriaController@guardar');
+
+Route::post('/categorias/eliminar', 'CategoriaController@eliminar');
 
 
 Auth::routes();

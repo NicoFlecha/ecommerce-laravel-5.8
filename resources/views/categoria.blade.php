@@ -21,10 +21,21 @@ Categorias
         </div>
       </a>
     @empty
-      <p>No hay marcas</p>
+      <h3>No hay Categorias</h3>
     @endforelse
-    <div class="editar">
-      <a class="editar" href="/categorias/editar">Editar Categorías</a>
-    </div>
+  </div>
+  <div class="botones-edicion">
+    @if (Auth::user())
+      @if (Auth::user()->admin > 0)
+        <div class="editar">
+          <a class="editar" href="/categorias/agregar">Agregar Categorías</a>
+        </div>
+      @empty (!$categorias)
+        <div class="editar">
+          <a class="editar" href="/categorias/editar">Editar Categorías</a>
+        </div>
+      @endempty
+      @endif
+    @endif
   </div>
 @endsection

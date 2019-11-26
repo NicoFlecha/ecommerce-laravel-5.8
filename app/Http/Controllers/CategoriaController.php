@@ -10,40 +10,50 @@ class CategoriaController extends Controller
 {
     public function mostrar()
     {
-      $categorias = [
-        ['id' => 1, 'nombre' => 'celulares', 'icon' => "fas fa-mobile"],
-        ['id' => 2, 'nombre' => 'desktop', 'icon' => "fas fa-desktop"],
-        ['id' => 3, 'nombre' => 'smartwatch', 'icon' => "fas fa-clock"],
-        ['id' => 4, 'nombre' => 'tablet', 'icon' => "fas fa-tablet"]
-      ];
+      $categorias = Categoria::all();
       return view('categoria', compact('categorias'));
     }
 
-    public function formulario()
+    public function elegir()
     {
-      $categorias = [
-        ['id' => 1, 'nombre' => 'celulares', 'icon' => "fas fa-mobile"],
-        ['id' => 2, 'nombre' => 'desktop', 'icon' => "fas fa-desktop"],
-        ['id' => 3, 'nombre' => 'smartwatch', 'icon' => "fas fa-clock"],
-        ['id' => 4, 'nombre' => 'tablet', 'icon' => "fas fa-tablet"]
-      ];
+      $categorias = Categoria::all();
       return view('categoriaElegir', compact('categorias'));
     }
 
     public function editar($id)
     {
-      $categorias = [
-        ['id' => 1, 'nombre' => 'celulares', 'icon' => "fas fa-mobile"],
-        ['id' => 2, 'nombre' => 'desktop', 'icon' => "fas fa-desktop"],
-        ['id' => 3, 'nombre' => 'smartwatch', 'icon' => "fas fa-clock"],
-        ['id' => 4, 'nombre' => 'tablet', 'icon' => "fas fa-tablet"]
-      ];
-      foreach ($categorias as $categoria) {
-        if ($categoria['id'] == $id) {
-          $categoria = $categoria;
-          break;
-        }
-      }
+      $categoria = Categoria::find($id);
       return view('categoriaEditar', compact('categoria'));
+    }
+
+    public function agregar()
+    {
+      return view('categoriaAgregar');
+    }
+
+    public function guardar(Request $form)
+    {
+      $categoria = new Categoria();
+      if (Categoria::find($form['id'])) {
+        $categoria = Categoria::find($form['id']);
+      }
+      $categoria->id = $form['id'];
+      $categoria->nombre = $form['nombre'];
+      $categoria->icon = $form['icon'];
+
+      $categoria->save();
+
+
+      return redirect('/categorias');
+    }
+
+    public function eliminar(Request $form)
+    {
+      $categoria = Categoria::find($form['id']);
+
+      $categoria->delete();
+
+
+      return redirect('/categorias');
     }
 }
