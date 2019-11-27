@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'ProductoController@mostrar');
 
 Route::get('/faq', function () {
     return view('faq');

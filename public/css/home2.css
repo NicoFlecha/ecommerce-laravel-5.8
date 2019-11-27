@@ -88,10 +88,6 @@ div.productos div.producto div.descripcion small {
   }
 }
 
-div.relleno {
-  display: none;
-}
-
 @media only screen and (min-width: 1550px) {
   a.linkProducto {
     width: 20%;
