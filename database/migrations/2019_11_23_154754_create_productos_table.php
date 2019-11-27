@@ -20,6 +20,7 @@ class CreateProductosTable extends Migration
             $table->bigInteger('marca_id');
             $table->bigInteger('categoria_id');
             $table->decimal('precio', 8, 2);
+            $table->integer('cantidad');
         });
     }
 
