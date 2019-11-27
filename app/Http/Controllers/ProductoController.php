@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Producto;
+use App\Categoria;
+use App\Marca;
 
 class ProductoController extends Controller
 {
@@ -14,6 +16,13 @@ class ProductoController extends Controller
     }
 
     // Método agregar
+    public function agregar()
+    {
+      $categorias = Categoria::all();
+      $marcas = Marca::all();
+
+      return view('productoAgregar', compact('categorias', 'marcas'));
+    }
     // Muestra la vista para agregar un producto la cual debe tener un formulario, la ruta es '/productos/agregar', y debe tener el middleware admin
 
     // Método guardar

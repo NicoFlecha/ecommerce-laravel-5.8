@@ -43,5 +43,7 @@ Route::post('/categorias/editar', 'CategoriaController@guardar')->middleware('ad
 
 Route::post('/categorias/eliminar', 'CategoriaController@eliminar')->middleware('admin');
 
+Route::get('/productos/agregar', 'ProductoController@agregar');
+
 
 Auth::routes();
