@@ -56,6 +56,17 @@ button.btn.dropdown-toggle.dropdown-toggle-split {
   padding: 0;
 }
 
+div.perfil {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.perfil img {
+  width: 100%;
+}
+
 /* button.btn.dropdown-toggle.dropdown-toggle-split:hover {
   font-weight: bold;
 } */

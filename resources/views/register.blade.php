@@ -11,7 +11,7 @@
 @section('principal')
   <h1>¡Registrate!</h1>
   <div class="contenedorFormulario">
-    <form class="registro" action="/register" method="post">
+    <form class="registro" action="/register" method="post" enctype="multipart/form-data">
       @csrf
       <div class="inputForm">
         <label for="nombre">Nombre:</label>
@@ -59,6 +59,8 @@
         @enderror
       </div>
       <div class="paraEnviar">
+        <label for="avatar" class="archivoBtn">Elegí una foto de Perfil</label>
+        <input class="archivo" type="file" name="avatar" id='avatar' value="Hola">
         <input class="enviar" type="submit" value='Registrarme'>
       </div>
     </form>

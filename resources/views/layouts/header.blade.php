@@ -30,6 +30,15 @@
       @endguest
       @if (Auth::user())
         <div class="btn-group">
+          <div class="perfil">
+            @php
+              $avatar = 'default.png';
+              if (Auth::user()->avatar) {
+                $avatar = Auth::user()->avatar;
+              }
+            @endphp
+            <img src="/storage/{{$avatar}}" alt="Foto de {{Auth::user()->name}}">
+          </div>
           <a href="/perfil">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</a>
           <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"  aria-expanded="false">
             <span class="sr-only">Toggle Dropdown</span>

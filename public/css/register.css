@@ -46,6 +46,10 @@ form.registro input {
 form.registro div.paraEnviar {
   width: 100%;
   text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 form.registro div.paraEnviar input.enviar {
@@ -63,6 +67,20 @@ form.registro div.paraEnviar input.enviar:hover {
   background-color: #D53717;
 }
 
+form.registro div.paraEnviar input.archivo {
+  display: none;
+}
+
+form.registro div.paraEnviar label.archivoBtn {
+  width: 40%;
+  background-color: #EBA495;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 700px) {
   form.registro {
@@ -77,6 +95,15 @@ form.registro div.paraEnviar input.enviar:hover {
   }
   form div.inputForm.email {
     width: 100%;
+  }
+
+  /* form.registro div.paraEnviar {
+    justify-content: space-around;
+  } */
+
+  form.registro div.paraEnviar label.archivoBtn {
+    height: 40px;
+    padding: 8px;
   }
 }
 
