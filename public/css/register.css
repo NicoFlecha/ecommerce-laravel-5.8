@@ -79,6 +79,15 @@ form.registro div.paraEnviar label.archivoBtn {
   font-weight: bold;
   text-align: center;
   padding: 3px;
+  height: auto;
+}
+label.archivoBtn.form-control.is-invalid {
+  background-image: none;
+}
+
+div.avatar-error {
+  color: red;
+  font-size: 0.7em:
 }
 
 /* Media Queries */

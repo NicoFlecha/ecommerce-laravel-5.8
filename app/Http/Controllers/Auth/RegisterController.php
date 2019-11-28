@@ -48,12 +48,19 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        return Validator::make($data,
+        [
             'name' => ['required', 'string', 'max:255'],
             'apellido' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'avatar' => ['nullable', 'image', 'max: 10000', 'file'],
+        ],
+
+        [
+            'avatar.image' => 'El archivo debe ser una imagen',
+        ]
+      );
     }
 
     /**
@@ -65,7 +72,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $ruta = null;
-        if ($data['avatar']) {
+        if (isset($data['avatar'])) {
           $archivo = $data['avatar']->store('public');
           $ruta = basename($archivo);
         }

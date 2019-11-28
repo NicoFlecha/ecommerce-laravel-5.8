@@ -59,10 +59,15 @@
         @enderror
       </div>
       <div class="paraEnviar">
-        <label for="avatar" class="archivoBtn">Elegí una foto de Perfil</label>
+        <label for="avatar" class="archivoBtn form-control @error('avatar') is-invalid @enderror">Elegí una foto de Perfil</label>
         <input class="archivo" type="file" name="avatar" id='avatar' value="Hola">
         <input class="enviar" type="submit" value='Registrarme'>
       </div>
+      @error('avatar')
+        <div class="avatar-error">
+          {{$message}}
+        </div>
+      @enderror
     </form>
   </div>
 @endsection
