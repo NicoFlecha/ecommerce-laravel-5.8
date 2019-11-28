@@ -80,14 +80,21 @@ form.registro div.paraEnviar label.archivoBtn {
   text-align: center;
   padding: 3px;
   height: auto;
+  border: none;
 }
+
+form.registro div.paraEnviar label.archivoBtn:hover {
+  background-color: #EA8C79;
+}
+
 label.archivoBtn.form-control.is-invalid {
   background-image: none;
+  border: #dc3545 1px solid !important;
 }
 
 div.avatar-error {
-  color: red;
-  font-size: 0.7em:
+  color: #dc3545;
+  font-size: 80%;
 }
 
 /* Media Queries */

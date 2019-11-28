@@ -58,7 +58,7 @@ class RegisterController extends Controller
         ],
 
         [
-            'avatar.image' => 'El archivo debe ser una imagen',
+            'avatar.image' => 'The file must be a valid image format.',
         ]
       );
     }
