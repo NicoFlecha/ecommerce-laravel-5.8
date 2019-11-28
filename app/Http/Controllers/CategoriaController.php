@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Categoria;
+use App\Producto;
 
 class CategoriaController extends Controller
 {
@@ -70,5 +71,11 @@ class CategoriaController extends Controller
       $categoria->delete();
       // Redirije a la ruta /categorias
       return redirect('/categorias');
+    }
+
+    public function mostrarProductos($id)
+    {
+      $productos = Producto::where('categoria_id', '=', $id)->paginate(2);
+      return view('index', compact('productos'));
     }
 }

@@ -11,7 +11,7 @@ class ProductoController extends Controller
 {
     public function mostrar()
     {
-      $productos = Producto::all();
+      $productos = Producto::paginate(6);
       return view('index', compact('productos'));
     }
 
@@ -21,12 +21,32 @@ class ProductoController extends Controller
       $categorias = Categoria::all();
       $marcas = Marca::all();
 
+      // Muestra la vista para agregar un producto la cual debe tener un formulario, la ruta es '/productos/agregar', y debe tener el middleware admin
       return view('productoAgregar', compact('categorias', 'marcas'));
     }
-    // Muestra la vista para agregar un producto la cual debe tener un formulario, la ruta es '/productos/agregar', y debe tener el middleware admin
 
     // Método guardar
-    // Toma lo que venga por Post de la ruta '/productos/agregar'
-    // Guarda la info la BBDD
-    // Regresa una redirección a la ruta '/home'
+    public function guardar(Request $form) // Toma lo que venga por Post de la ruta '/productos/agregar'
+    {
+      // Asigna los valores a un objeto de clase Producto
+      $producto = new Producto;
+      $producto->nombre = $form['nombre'];
+      $producto->categoria_id = $form['categoria_id'];
+      $producto->marca_id = 1;
+      $producto->precio = $form['precio'];
+      $producto->cantidad = $form['cantidad'];
+      $producto->descripcion = $form['descripcion'];
+
+      // Guarda el Producto en la BBDD
+      $producto->save();
+
+      // Regresa una redirección a la ruta '/home'
+      return redirect('/');
+    }
+
+    public function mostrarProducto($id)
+    {
+      $producto = Producto::find($id);
+      return view('verProducto', compact('producto'));
+    }
 }

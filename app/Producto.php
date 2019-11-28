@@ -12,12 +12,12 @@ class Producto extends Model
   public $timestamps = false;
   public $guarded = [];
 
-  public function categorias()
+  public function categoria()
   {
     return $this->belongsTo(Categoria::class, 'categoria_id');
   }
 
-  public function marcas()
+  public function marca()
   {
     return $this->belongsTo(Marca::class, 'marca_id');
   }

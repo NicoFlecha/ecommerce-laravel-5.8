@@ -12,7 +12,7 @@ Categorias
   <h1>Categorias</h1>
   <div class="categorias">
     @forelse ($categorias as $categoria)
-      <a class="categoria" href="#">
+      <a class="categoria" href="/categorias/{{$categoria->id}}">
         <div class="categoria-icon">
           <i class="{{$categoria['icon']}}"></i>
         </div>

@@ -45,5 +45,10 @@ Route::post('/categorias/eliminar', 'CategoriaController@eliminar')->middleware(
 
 Route::get('/productos/agregar', 'ProductoController@agregar');
 
+Route::post('/productos/agregar', 'ProductoController@guardar');
+
+Route::get('/categorias/{id}', 'CategoriaController@mostrarProductos');
+
+Route::get('/productos/{id}', 'ProductoController@mostrarProducto');
 
 Auth::routes();

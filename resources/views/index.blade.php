@@ -16,12 +16,18 @@
     </div>
     <div class="productos">
       @forelse ($productos as $producto)
-      <a class="linkProducto" href="#">
+      <a class="linkProducto" href="/productos/{{$producto->id}}">
         <div class="producto">
           <div class="imgProducto">
             <img src={{$producto['imgProducto']}}>
           </div>
           <div class="textoProducto">
+            <div class="nombre">
+              {{$producto->nombre}}
+            </div>
+            <div class="categoria">
+              {{$producto->categoria->nombre}}
+            </div>
             <div class="precio">
               <span>$ {{$producto['precio']}}</span>
             </div>
@@ -35,5 +41,6 @@
       <p>No hay Productos</p>
     @endforelse
     </div>
+    {{$productos->links()}}
 
 @endsection
