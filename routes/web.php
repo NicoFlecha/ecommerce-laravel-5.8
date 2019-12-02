@@ -17,6 +17,10 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
+Route::get('/search', function () {
+    return view('search');
+});
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -28,6 +32,8 @@ Route::get('/register', function () {
 Route::get('/carrito', function () {
     return view('carrito');
 });
+
+Route::get('/search/{id}', 'SearchController@mostrarProductos');
 
 Route::get('/perfil', 'UserController@mostrarPerfil');
 
