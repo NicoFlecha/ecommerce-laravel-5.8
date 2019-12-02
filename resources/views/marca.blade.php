@@ -12,7 +12,7 @@ Marcas
   <h1>Marcas</h1>
   <div class="categorias">
     @forelse ($marcas as $marca)
-      <a class="categoria" href="/categorias/{{$marca->id}}">
+      <a class="categoria" href="/marcas/{{$marca->id}}">
         <div class="categoria-icon">
           <img src="{{$marca['imagen']}}">
         </div>

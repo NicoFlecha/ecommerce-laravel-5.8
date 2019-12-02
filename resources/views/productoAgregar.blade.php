@@ -28,6 +28,18 @@
     @error ('categoria_id')
       {{$message}}<br>
     @enderror
+    <label for="marca">¿A qué marca corresponde?:</label><br>
+    <select class="" name="marca_id" id="marca">
+      <option value="" selected>Elija una opción</option>
+      @foreach ($marcas as $marca)
+        <option value="{{$marca->id}}">
+          {{$marca->nombre}}
+        </option>
+      @endforeach
+    </select><br>
+    @error ('categoria_id')
+      {{$message}}<br>
+    @enderror
     <label for="precio">Precio (en pesos):</label><br>
     <input type="text" name="precio"><br>
     @error ('precio')

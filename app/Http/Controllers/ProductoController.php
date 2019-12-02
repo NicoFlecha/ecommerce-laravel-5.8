@@ -34,6 +34,7 @@ class ProductoController extends Controller
       [
         'nombre' => 'required|unique:productos',
         'categoria_id' => 'required',
+        'marca_id' => 'required',
         'precio' => 'required|numeric|min:1',
         'cantidad' => 'required|min:1|integer',
         'descripcion' => 'required|min:2',
@@ -42,6 +43,7 @@ class ProductoController extends Controller
         'nombre.required' => 'El producto debe tener un nombre.',
         'nombre.unique' => 'El producto ya existe.',
         'categoria_id.required' => 'El producto debe tener una categoria.',
+        'marca_id.required' => 'El producto debe tener una Marca.',
         'precio.required' => 'El producto debe tener un precio.',
         'precio.numeric' => 'El precio del producto debe ser un número.',
         'precio.min' => 'El precio mínimo es de $ :min.',
@@ -55,7 +57,7 @@ class ProductoController extends Controller
       $producto = new Producto;
       $producto->nombre = $form['nombre'];
       $producto->categoria_id = $form['categoria_id'];
-      $producto->marca_id = 1;
+      $producto->marca_id = $form['marca_id'];
       $producto->precio = $form['precio'];
       $producto->cantidad = $form['cantidad'];
       $producto->descripcion = $form['descripcion'];

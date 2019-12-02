@@ -69,4 +69,6 @@ Route::post('/marcas/editar', 'MarcaController@guardar')->middleware('admin');
 
 Route::post('/marcas/eliminar', 'MarcaController@eliminar')->middleware('admin');
 
+Route::get('/marcas/{id}', 'MarcaController@mostrarProductos');
+
 Auth::routes();

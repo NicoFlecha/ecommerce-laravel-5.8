@@ -28,6 +28,9 @@
             <div class="categoria">
               {{$producto->categoria->nombre}}
             </div>
+            <div class="marca">
+              <img src="{{$producto->marca->imagen}}" alt="{{$producto->marca->nombre}}">
+            </div>
             <div class="precio">
               <span>$ {{$producto['precio']}}</span>
             </div>

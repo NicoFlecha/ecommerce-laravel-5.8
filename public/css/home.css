@@ -35,6 +35,7 @@ a.linkProducto {
     padding: 30px 10px;
     box-shadow: 0 0 15px #ddd;
     margin-top: 20px;
+    position: relative;
   }
 
 div.productos div.producto div.imgProducto {
@@ -52,6 +53,16 @@ div.productos div.producto div.textoProducto {
   display: flex;
   flex-direction: column;
   font-size: 1.05em;
+}
+
+div.productos div.producto div.marca {
+  width: 30px;
+  position: absolute;
+  right: 10%;
+}
+
+div.productos div.producto div.marca img {
+  width: 100%;
 }
 
 div.productos div.producto div.precio span {
