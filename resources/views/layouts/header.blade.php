@@ -20,7 +20,7 @@
         </button>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="/categorias"><i class="fas fa-shapes"></i> Categorias</a>
-          <a class="dropdown-item" href="#"><i class="far fa-copyright"></i> Marcas</a>
+          <a class="dropdown-item" href="/marcas"><i class="far fa-copyright"></i> Marcas</a>
         </div>
       </div>
       <a href="/faq"><i class="far fa-question-circle"></i> F.A.Q</a>
