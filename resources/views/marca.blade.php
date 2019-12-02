@@ -13,7 +13,7 @@ Marcas
   <div class="categorias">
     @forelse ($marcas as $marca)
       <a class="categoria" href="/marcas/{{$marca->id}}">
-        <div class="categoria-icon">
+        <div class="marca-imagen">
           <img src="{{$marca['imagen']}}">
         </div>
         <div class="texto">
