@@ -15,8 +15,8 @@ Categorias
     <input type="text" name="id" value="{{$marca['id']}}" class="no-mostrar">
     <label for="">Nombre de la Marca:</label>
     <input type="text" name="nombre" value="{{$marca['nombre']}}">
-    <label for="">Icono:</label>
-    <input type="text" name="icon" value="{{$marca['icon']}}">
+    <label for="">Imagen:</label>
+    <input type="text" name="imagen" value="{{$marca['imagen']}}">
     <div class="botones-edicion">
       <div class="editar">
         <input class='editar' type="submit" value='Guardar'>

@@ -54,7 +54,7 @@ class MarcaController extends Controller
     // Asigna/Actualiza valores de los atributos de Marca
     $marca->id = $form['id'];
     $marca->nombre = $form['nombre'];
-    $marca->icon = $form['icon'];
+    $marca->imagen = $form['imagen'];
     // Guarda/Actualiza la Marca
     $marca->save();
     // Redirije a la ruta /marcas

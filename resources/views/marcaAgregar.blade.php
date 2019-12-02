@@ -12,10 +12,10 @@ MArcas
   <h1>Edite la MArca</h1>
   <form class="editar" action="/marcas/editar" method="post">
     @csrf
-    <label for="">Nombre de la Categoría:</label>
+    <label for="">Nombre de la Marca:</label>
     <input type="text" name="nombre">
-    <label for="">Icono:</label>
-    <input type="text" name="icon">
+    <label for="">Imagen:</label>
+    <input type="text" name="imagen">
     <div class="botones-edicion">
       <div class="editar">
         <input class='editar' type="submit" value='Guardar'>

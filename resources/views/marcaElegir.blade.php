@@ -15,7 +15,7 @@ Categorias
     @forelse ($marcas as $marca)
       <a class="categoria" href="/marcas/editar/{{$marca['id']}}">
         <div class="categoria-icon">
-          <i class="{{$marca['icon']}}"></i>
+          <img src="{{$marca['imagen']}}">
         </div>
         <div class="texto">
           {{$marca['nombre']}}

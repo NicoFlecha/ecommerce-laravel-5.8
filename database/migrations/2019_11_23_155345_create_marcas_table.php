@@ -17,7 +17,7 @@ class CreateMarcasTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('nombre', 50);
-            $table->string('imagen');
+            $table->string('imagen', 300);
         });
     }
 

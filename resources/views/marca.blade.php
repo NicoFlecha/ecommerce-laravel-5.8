@@ -14,7 +14,7 @@ Marcas
     @forelse ($marcas as $marca)
       <a class="categoria" href="/categorias/{{$marca->id}}">
         <div class="categoria-icon">
-          <i class="{{$marca['icon']}}"></i>
+          <img src="{{$marca['imagen']}}">
         </div>
         <div class="texto">
           {{$marca['nombre']}}
@@ -30,7 +30,7 @@ Marcas
         <div class="editar">
           <a class="editar" href="/marcas/agregar">Agregar Marcas</a>
         </div>
-      @empty (!$categorias)
+      @empty (!$marcas)
         <div class="editar">
           <a class="editar" href="/marcas/editar">Editar Marcas</a>
         </div>
