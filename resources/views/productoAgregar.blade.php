@@ -12,7 +12,7 @@
   <form action="/productos/agregar" method="post">
     @csrf
     <label for="nombre">Nombre del Producto:</label><br>
-    <input type="text" name="nombre" id="nombre" value=""><br>
+    <input type="text" name="nombre" id="nombre" value="{{old('nombre')}}"><br>
     @error ('nombre')
       {{$message}}<br>
     @enderror
@@ -41,7 +41,7 @@
       {{$message}}<br>
     @enderror
     <label for="precio">Precio (en pesos):</label><br>
-    <input type="text" name="precio"><br>
+    <input type="text" name="precio" value="{{old('precio')}}"><br>
     @error ('precio')
       {{$message}}<br>
     @enderror
