@@ -57,4 +57,16 @@ Route::get('/categorias/{id}', 'CategoriaController@mostrarProductos');
 
 Route::get('/productos/{id}', 'ProductoController@mostrarProducto');
 
+Route::get('/marcas', 'MarcaController@mostrar');
+
+Route::get('/marcas/editar', 'MarcaController@elegir')->middleware('admin');
+
+Route::get('/marcas/editar/{id}', 'MarcaController@editar')->middleware('admin');
+
+Route::get('/marcas/agregar', 'MarcaController@agregar')->middleware('admin');
+
+Route::post('/marcas/editar', 'MarcaController@guardar')->middleware('admin');
+
+Route::post('/marcas/eliminar', 'MarcaController@eliminar')->middleware('admin');
+
 Auth::routes();
