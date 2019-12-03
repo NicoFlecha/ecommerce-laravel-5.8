@@ -16,10 +16,14 @@
     </div>
     <div class="productos">
       @forelse ($productos as $producto)
+      <button type="button" class="anterior{{$producto->id}}">Anterior</button>
       <a class="linkProducto" href="/productos/{{$producto->id}}">
         <div class="producto">
           <div class="imgProducto">
-            <img class="imagen-producto" src="/storage/{{$producto->imagenes->first()->ruta}}" alt="">
+            @php
+              $imagenesProducto = $producto->imagenes->all();
+            @endphp
+            <img class="imagen-producto{{$producto->id}}" src="/storage/{{$producto->imagenes->first()->ruta}}" alt="">
           </div>
           <div class="textoProducto">
             <div class="nombre">
@@ -40,6 +44,31 @@
           </div>
         </div>
       </a>
+      <button type="button" class="siguiente{{$producto->id}}">Siguiente</button>
+      <script>
+        var imagenesJSON{{$producto->id}} = @json($imagenesProducto);
+        var contador{{$producto->id}} = 0;
+        var cantidadImagenes{{$producto->id}} = imagenesJSON{{$producto->id}}.length;
+        var imagen{{$producto->id}} = document.querySelector('.imagen-producto{{$producto->id}}');
+        var siguienteBtn = document.querySelector('.siguiente{{$producto->id}}');
+        var anteriorBtn = document.querySelector('.anterior{{$producto->id}}');
+        siguienteBtn.addEventListener('click', function () {
+          contador{{$producto->id}}++;
+          if (contador{{$producto->id}} > cantidadImagenes{{$producto->id}} - 1) {
+            contador{{$producto->id}} = 0;
+          }
+          imagen{{$producto->id}}.setAttribute('src', '/storage/' + imagenesJSON{{$producto->id}}[contador{{$producto->id}}].ruta)
+          console.log(imagenesJSON{{$producto->id}}[contador{{$producto->id}}].ruta);
+        });
+        anteriorBtn.addEventListener('click', function () {
+          contador{{$producto->id}}--;
+          if (contador{{$producto->id}} < 0) {
+            contador{{$producto->id}} = cantidadImagenes{{$producto->id}} - 1;
+          }
+          imagen{{$producto->id}}.setAttribute('src', '/storage/' + imagenesJSON{{$producto->id}}[contador{{$producto->id}}].ruta)
+          console.log(imagenesJSON{{$producto->id}}[contador{{$producto->id}}].ruta);
+        });
+      </script>
     @empty
       <p>No hay Productos</p>
     @endforelse
