@@ -16,35 +16,35 @@
     </div>
     <div class="productos">
       @forelse ($productos as $producto)
-      <button type="button" class="anterior{{$producto->id}}">Anterior</button>
-      <a class="linkProducto" href="/productos/{{$producto->id}}">
-        <div class="producto">
-          <div class="imgProducto">
-            @php
+          <div class="producto">
+            <button type="button" class="anterior{{$producto->id}} controlador-anterior"><</button>
+            <a class="linkProducto" href="/productos/{{$producto->id}}">
+            <div class="imgProducto">
+              @php
               $imagenesProducto = $producto->imagenes->all();
-            @endphp
-            <img class="imagen-producto{{$producto->id}}" src="/storage/{{$producto->imagenes->first()->ruta}}" alt="">
-          </div>
-          <div class="textoProducto">
-            <div class="nombre">
-              {{$producto->nombre}}
+              @endphp
+              <img class="imagen-producto{{$producto->id}}" src="/storage/{{$producto->imagenes->first()->ruta}}" alt="">
             </div>
-            <div class="categoria">
-              {{$producto->categoria->nombre}}
+            <div class="textoProducto">
+              <div class="nombre">
+                {{$producto->nombre}}
+              </div>
+              <div class="categoria">
+                {{$producto->categoria->nombre}}
+              </div>
+              <div class="marca">
+                <img src="{{$producto->marca->imagen}}" alt="{{$producto->marca->nombre}}">
+              </div>
+              <div class="precio">
+                <span>$ {{$producto['precio']}}</span>
+              </div>
+              <div class="descripcion">
+                <small>{{$producto['descripcion']}}</small>
+              </div>
             </div>
-            <div class="marca">
-              <img src="{{$producto->marca->imagen}}" alt="{{$producto->marca->nombre}}">
-            </div>
-            <div class="precio">
-              <span>$ {{$producto['precio']}}</span>
-            </div>
-            <div class="descripcion">
-              <small>{{$producto['descripcion']}}</small>
-            </div>
-          </div>
-        </div>
-      </a>
-      <button type="button" class="siguiente{{$producto->id}}">Siguiente</button>
+            </a>
+        <button type="button" class="siguiente{{$producto->id}} controlador-siguiente">></button>
+      </div>
       <script>
         var imagenesJSON{{$producto->id}} = @json($imagenesProducto);
         var contador{{$producto->id}} = 0;

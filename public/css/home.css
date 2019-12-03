@@ -18,23 +18,29 @@ div.productos {
 }
 
 a.linkProducto {
-  display: inline-block;
-  width: 90%;
-  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 30px;
+  /* border: 1px darkgray solid; */
+  padding: 30px 10px;
+  box-shadow: 0 0 15px #ddd;
+  margin-top: 20px;
+  position: relative;
+  color: black;
+  width: 100%;
 }
 
   div.productos div.producto {
-    /* height: 285px; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    overflow: hidden;
-    background-color: white;
-    border-radius: 30px;
-    /* border: 1px darkgray solid; */
-    padding: 30px 10px;
-    box-shadow: 0 0 15px #ddd;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    color: inherit;
+    /* height: 285px; */
     position: relative;
   }
 
@@ -55,6 +61,7 @@ div.productos div.producto div.textoProducto {
   display: flex;
   flex-direction: column;
   font-size: 1.05em;
+  width: 100%;
 }
 
 div.productos div.producto div.marca {
@@ -76,27 +83,56 @@ div.productos div.producto div.descripcion small {
   text-transform: capitalize;
 }
 
+button.controlador-anterior {
+  height: 40px;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(227,127,107,0.1);
+  border: none;
+}
+
+button.controlador-siguiente {
+  height: 40px;
+  width: 50px;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(227,127,107,0.1);
+  border: none;
+}
+
+
 /* Media Queries */
 @media only screen and (min-width: 450px) {
   a.linkProducto {
-    display: inline-block;
-    width: 48%;
+    height: 285px;
+    padding: 40px 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  a.linkProducto .textoProducto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
   div.productos div.producto {
-    height: 285px;
-    padding: 40px 10px;
+    width: 48%;
+
   }
 }
 
 @media only screen and (min-width: 650px) {
-  a.linkProducto {
+  div.productos div.producto {
     width: 31%;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  a.linkProducto {
+  div.productos div.producto {
     width: 24%;
   }
 }
@@ -106,7 +142,7 @@ div.relleno {
 }
 
 @media only screen and (min-width: 1550px) {
-  a.linkProducto {
+  div.productos div.producto {
     width: 20%;
   }
 }
