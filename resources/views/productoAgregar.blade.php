@@ -9,7 +9,7 @@
 @endsection
 
 @section('principal')
-  <form action="/productos/agregar" method="post">
+  <form action="/productos/agregar" method="post" enctype="multipart/form-data">
     @csrf
     <label for="nombre">Nombre del Producto:</label><br>
     <input type="text" name="nombre" id="nombre" value="{{old('nombre')}}"><br>
@@ -53,6 +53,11 @@
     <label for="cantidad">Stock del Producto:</label><br>
     <input type="number" name="cantidad" value="1"><br>
     @error ('cantidad')
+      {{$message}}<br>
+    @enderror
+    <label for="imagen">Seleccione una imagen para el Producto:</label><br>
+    <input type="file" name="imagen[]" id="imagen" multiple><br>
+    @error ('imagen')
       {{$message}}<br>
     @enderror
     <input type="submit" value="Guardar">

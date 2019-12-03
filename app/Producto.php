@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Categoria;
 use App\Marca;
+use App\Imagen;
 
 class Producto extends Model
 {
@@ -20,5 +21,10 @@ class Producto extends Model
   public function marca()
   {
     return $this->belongsTo(Marca::class, 'marca_id');
+  }
+
+  public function imagenes()
+  {
+    return $this->hasMany(Imagen::class, 'producto_id');
   }
 }

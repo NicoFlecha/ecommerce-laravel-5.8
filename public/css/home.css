@@ -42,11 +42,13 @@ div.productos div.producto div.imgProducto {
   width: 95%;
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 div.productos div.producto div.imgProducto img {
   width: auto;
   max-height: 140px;
+  border-radius: 10px;
 }
 
 div.productos div.producto div.textoProducto {

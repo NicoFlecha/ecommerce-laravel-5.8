@@ -19,7 +19,7 @@
       <a class="linkProducto" href="/productos/{{$producto->id}}">
         <div class="producto">
           <div class="imgProducto">
-            <img src={{$producto['imgProducto']}}>
+            <img class="imagen-producto" src="/storage/{{$producto->imagenes->first()->ruta}}" alt="">
           </div>
           <div class="textoProducto">
             <div class="nombre">
@@ -45,5 +45,4 @@
     @endforelse
     </div>
     {{$productos->links()}}
-
 @endsection

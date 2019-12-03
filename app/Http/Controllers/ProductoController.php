@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Producto;
 use App\Categoria;
 use App\Marca;
+use App\Imagen;
 
 class ProductoController extends Controller
 {
@@ -38,6 +39,7 @@ class ProductoController extends Controller
         'precio' => 'required|numeric|min:1',
         'cantidad' => 'required|min:1|integer',
         'descripcion' => 'required|min:2',
+        'imagen' => ['required']
       ],
       [
         'nombre.required' => 'El producto debe tener un nombre.',
@@ -52,6 +54,8 @@ class ProductoController extends Controller
         'cantidad.numeric' => 'El stock debe ser un número entero.',
         'descripcion.required' => 'El producto debe tener una descripcion.',
         'descripcion.min' => 'La descripción debe tener más de :min caracteres.',
+        'imagen.required' => 'El producto necesita, como mínimo, una imagen.',
+        'imagen.image' => 'El archivo debe ser un formato válido de imagen.',
       ]);
       // Asigna los valores a un objeto de clase Producto
       $producto = new Producto;
@@ -64,6 +68,27 @@ class ProductoController extends Controller
 
       // Guarda el Producto en la BBDD
       $producto->save();
+
+      // Traigo al producto recién creado para obtener su ID
+      $ultimoProducto = Producto::all()->last();
+      $idProducto = $ultimoProducto->id;
+
+      // Obtengo el array de imagenes
+      $imagenes = $form->file('imagen');
+      // Recorro el Array
+      foreach ($imagenes as $imagen) {
+        // Guardo cada imagen en /storage/public
+        $archivo = $imagen->store('public');
+        // Obtengo sus nombres
+        $ruta = basename($archivo);
+        // Por cada imagem, instancio un objeto de la clase imagen
+        $imagenProducto = new Imagen;
+        // Asigno las rutas correspondientes
+        $imagenProducto->producto_id = $idProducto;
+        $imagenProducto->ruta = $ruta;
+        // Guardo las imagenes
+        $imagenProducto->save();
+      }
 
       // Regresa una redirección a la ruta '/home'
       return redirect('/');
