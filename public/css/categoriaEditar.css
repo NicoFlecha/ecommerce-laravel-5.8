@@ -80,7 +80,7 @@ form.eliminar input {
 }
 
 form.eliminar input:hover {
-  background-color: #AF1515;  
+  background-color: #AF1515;
 }
 
 @media only screen and (min-width: 768px) {
