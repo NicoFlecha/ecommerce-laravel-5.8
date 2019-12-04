@@ -14,6 +14,11 @@
     <div class="banner">
       <!-- <img src="img/banner.jpg" alt="Laptop"> -->
     </div>
+    @if (Auth::user()->admin > 0)
+      <div class="editar">
+        <a class="editar" href="/productos/agregar">Agregar Categorías</a>
+      </div>
+    @endif
     <div class="productos">
       @forelse ($productos as $producto)
           <div class="producto">
