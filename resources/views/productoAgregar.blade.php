@@ -5,11 +5,11 @@
 @endsection
 
 @section('css')
-  ''
+'/css/categoriaEditar.css'
 @endsection
 
 @section('principal')
-  <form action="/productos/agregar" method="post" enctype="multipart/form-data">
+  <form class="editar" action="/productos/agregar" method="post" enctype="multipart/form-data">
     @csrf
     <label for="nombre">Nombre del Producto:</label><br>
     <input type="text" name="nombre" id="nombre" value="{{old('nombre')}}"><br>
