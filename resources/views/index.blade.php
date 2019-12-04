@@ -68,6 +68,21 @@
           imagen{{$producto->id}}.setAttribute('src', '/storage/' + imagenesJSON{{$producto->id}}[contador{{$producto->id}}].ruta)
           console.log(imagenesJSON{{$producto->id}}[contador{{$producto->id}}].ruta);
         });
+
+
+
+        // buscador script
+        // window.addEventListener('load', function(){
+        //   document.getElementById("texto").addEventListener('keyup', function(){
+        //     fetch('/search?texto=${document.getElementById("texto").value}',{
+        //     method:'get'
+        //   })
+        //     .then(function(response){
+        //       response.text()
+        //     })
+        //     .then(function())
+        //   })
+        // })
       </script>
     @empty
       <p>No hay Productos</p>

@@ -33,7 +33,7 @@ Route::get('/carrito', function () {
     return view('carrito');
 });
 
-Route::get('/search/{id}', 'SearchController@mostrarProductos');
+Route::get('/search', 'SearchController@buscador');
 
 Route::get('/perfil', 'UserController@mostrarPerfil');
 

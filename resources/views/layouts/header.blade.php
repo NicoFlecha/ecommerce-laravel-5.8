@@ -11,19 +11,19 @@
       </a>
     </div>
 
-    <div class="enlaces" id="enlaces">
-
-      {{-- Barra de busqueda en construcción --}}
-      
-      {{-- <div class="col-lg-4 mx-auto">
+    {{-- Buscador casi terminado v1.2 --}}
+     <div class="enlaces" id="enlaces">
+      {{--<div class="col-lg-4 mx-auto">
        <form action="/search" method="get">
         <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+
           <div class="input-group">
-            <input type="search" placeholder="¿Que producto buscas?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+            <input type="text" placeholder="¿Que producto buscas?" id="texto" class="form-control border-0 bg-light">
             <div class="input-group-append">
               <button name= "busqueda" id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
             </div>
           </div>
+
         </div>
        </form>
       </div> --}}
