@@ -14,21 +14,22 @@
     <div class="banner">
       <!-- <img src="img/banner.jpg" alt="Laptop"> -->
     </div>
-    @if (Auth::user()->admin > 0)
-      <div class="editar">
-        <a class="editar" href="/productos/agregar">Agregar Categorías</a>
-      </div>
+    @if (Auth::user())
+      @if (Auth::user()->admin > 0)
+        <div class="editar">
+          <a class="editar" href="/productos/agregar">Agregar Producto</a>
+        </div>
+      @endif
     @endif
     <div class="productos">
       @forelse ($productos as $producto)
           <div class="producto">
-            <button type="button" class="anterior{{$producto->id}} controlador-anterior"><</button>
+            <button type="button" class="anterior controlador-anterior"><</button>
             <a class="linkProducto" href="/productos/{{$producto->id}}">
             <div class="imgProducto">
-              @php
-              $imagenesProducto = $producto->imagenes->all();
-              @endphp
-              <img class="imagen-producto{{$producto->id}}" src="/storage/{{$producto->imagenes->first()->ruta}}" alt="">
+              @foreach ($producto->imagenes as $imagen)
+                <img class="imagen-producto" src="/storage/{{$imagen->ruta}}" alt="">
+              @endforeach
             </div>
             <div class="textoProducto">
               <div class="nombre">
@@ -48,50 +49,12 @@
               </div>
             </div>
             </a>
-        <button type="button" class="siguiente{{$producto->id}} controlador-siguiente">></button>
+        <button type="button" class="siguiente controlador-siguiente">></button>
       </div>
-      <script>
-        var imagenesJSON{{$producto->id}} = @json($imagenesProducto);
-        var contador{{$producto->id}} = 0;
-        var cantidadImagenes{{$producto->id}} = imagenesJSON{{$producto->id}}.length;
-        var imagen{{$producto->id}} = document.querySelector('.imagen-producto{{$producto->id}}');
-        var siguienteBtn = document.querySelector('.siguiente{{$producto->id}}');
-        var anteriorBtn = document.querySelector('.anterior{{$producto->id}}');
-        siguienteBtn.addEventListener('click', function () {
-          contador{{$producto->id}}++;
-          if (contador{{$producto->id}} > cantidadImagenes{{$producto->id}} - 1) {
-            contador{{$producto->id}} = 0;
-          }
-          imagen{{$producto->id}}.setAttribute('src', '/storage/' + imagenesJSON{{$producto->id}}[contador{{$producto->id}}].ruta)
-          console.log(imagenesJSON{{$producto->id}}[contador{{$producto->id}}].ruta);
-        });
-        anteriorBtn.addEventListener('click', function () {
-          contador{{$producto->id}}--;
-          if (contador{{$producto->id}} < 0) {
-            contador{{$producto->id}} = cantidadImagenes{{$producto->id}} - 1;
-          }
-          imagen{{$producto->id}}.setAttribute('src', '/storage/' + imagenesJSON{{$producto->id}}[contador{{$producto->id}}].ruta)
-          console.log(imagenesJSON{{$producto->id}}[contador{{$producto->id}}].ruta);
-        });
-
-
-
-        // buscador script
-        // window.addEventListener('load', function(){
-        //   document.getElementById("texto").addEventListener('keyup', function(){
-        //     fetch('/search?texto=${document.getElementById("texto").value}',{
-        //     method:'get'
-        //   })
-        //     .then(function(response){
-        //       response.text()
-        //     })
-        //     .then(function())
-        //   })
-        // })
-      </script>
     @empty
       <p>No hay Productos</p>
     @endforelse
     </div>
+    <script src="/js/index.js"></script>
     {{$productos->links()}}
 @endsection
