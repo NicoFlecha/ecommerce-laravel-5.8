@@ -24,7 +24,7 @@
     <div class="productos">
       @forelse ($productos as $producto)
           <div class="producto">
-            <button type="button" class="anterior controlador-anterior"><</button>
+            <button type="button" class="anterior controlador-anterior"><i class="fas fa-arrow-left"></i></button>
             <a class="linkProducto" href="/productos/{{$producto->id}}">
             <div class="imgProducto">
               @foreach ($producto->imagenes as $imagen)
@@ -49,7 +49,7 @@
               </div>
             </div>
             </a>
-        <button type="button" class="siguiente controlador-siguiente">></button>
+        <button type="button" class="siguiente controlador-siguiente"><i class="fas fa-arrow-right"></i></button>
       </div>
     @empty
       <p>No hay Productos</p>

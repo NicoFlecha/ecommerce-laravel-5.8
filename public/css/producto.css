@@ -1,0 +1,54 @@
+div.relleno {
+  height: 10vh;
+}
+
+div.imagenes {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+div.imagenes img {
+  max-height: 210px;
+  width: auto;
+}
+
+div.marca {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.marca-img {
+  width: 10%;
+}
+
+div.marca-img img {
+  width: 100%;
+}
+
+.control-carrousel {
+  height: 50px;
+  width: 50px;
+  box-shadow: none;
+}
+
+#anterior {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(227,127,107,0.1);
+  border: none;
+}
+
+#siguiente {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(227,127,107,0.1);
+  border: none;
+}
