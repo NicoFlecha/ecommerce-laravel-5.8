@@ -5,6 +5,18 @@ window.addEventListener('load', function () {
     var anteriorBtn = elementosProducto[0];
     var siguienteBtn = elementosProducto[2];
     var linkProducto = elementosProducto[1];
+    producto.onmouseover = function () {
+      anteriorBtn.style.display = 'block';
+      siguienteBtn.style.display = 'block';
+      if (arrayElementosDivImagen.length == 1) {
+        anteriorBtn.style.display = 'none';
+        siguienteBtn.style.display = 'none';
+      }
+    }
+    producto.onmouseout = function () {
+      anteriorBtn.style.display = 'none';
+      siguienteBtn.style.display = 'none';
+    }
     var elementosLink = linkProducto.children;
     var divImagen = elementosLink[0];
     var elementosDivImagen = divImagen.children;

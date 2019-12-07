@@ -66,6 +66,10 @@ div.productos div.producto div.textoProducto {
   width: 100%;
 }
 
+div.productos div.producto div.textoProducto div.nombre {
+  width: 90%;
+}
+
 div.productos div.producto div.marca {
   width: 30px;
   position: absolute;
@@ -93,6 +97,7 @@ button.controlador-anterior {
   z-index: 10;
   background-color: rgba(227,127,107,0.1);
   border: none;
+  outline: none;
 }
 
 button.controlador-siguiente {
@@ -103,6 +108,11 @@ button.controlador-siguiente {
   z-index: 10;
   background-color: rgba(227,127,107,0.1);
   border: none;
+  outline: none;
+}
+
+button i {
+  color: darkgray;
 }
 
 a.editar{
@@ -117,6 +127,36 @@ a.editar{
 div.editar{
   overflow: hidden;
   margin-top: 10px;
+}
+
+ul.pagination {
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.page-link {
+  outline: none;
+  color: #E47F6B;
+}
+
+.page-link:hover {
+  outline: none;
+  color: #E47F6B;
+  font-size: 1.1em;
+}
+
+.page-link:active {
+  outline: none;
+}
+
+.page-link:focus {
+  outline: none;
+}
+
+.page-item.active .page-link {
+  background-color: #E47F6B;
+  border-color: white;
+  outline: none;
 }
 
 /* Media Queries */
@@ -142,13 +182,26 @@ div.editar{
 
 @media only screen and (min-width: 650px) {
   div.productos div.producto {
-    width: 31%;
+    width: 42%;
   }
 }
 
 @media only screen and (min-width: 900px) {
   div.productos div.producto {
-    width: 24%;
+    width: 28%;
+    max-width: 230px;
+  }
+
+  div.productos div.producto a.linkProducto:hover {
+    box-shadow: 0 0 15px #C4C4C4;
+  }
+
+  div.producto button.controlador-anterior {
+    display: none;
+  }
+
+  div.producto button.controlador-siguiente {
+    display: none;
   }
 }
 
@@ -160,4 +213,5 @@ div.relleno {
   div.productos div.producto {
     width: 20%;
   }
+
 }
