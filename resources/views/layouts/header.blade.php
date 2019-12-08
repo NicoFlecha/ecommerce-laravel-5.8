@@ -11,9 +11,9 @@
       </a>
     </div>
 
-    {{-- Buscador casi terminado v1.2 --}}
+
      <div class="enlaces" id="enlaces">
-      {{--<div class="col-lg-4 mx-auto">
+      <div class="col-lg-4 mx-auto">
        <form action="/search" method="get">
         <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
 
@@ -26,7 +26,10 @@
 
         </div>
        </form>
-      </div> --}}
+      </div>
+
+      <div id="resultados">
+      </div>
 
       <!-- <a href="#"><i class="fas fa-fire"></i> Productos</a> -->
       <!-- Example split danger button -->

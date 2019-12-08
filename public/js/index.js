@@ -48,3 +48,23 @@ window.addEventListener('load', function () {
     }
   })
 })
+//buscador en tiempo real
+window.addEventListener('load', function(){
+    var buscador = document.querySelector('#texto')
+    buscador.addEventListener('keyup', function(){
+      if(this.value.length >= 3){
+      fetch(`/search?texto=${this.value}`, {
+        method:'get'
+      })
+      .then(function(response) {
+      return response.text();
+      })
+      .then(function(data){
+        document.getElementById("resultados").innerHTML = data
+      })
+    }
+      else {
+        document.getElementById("resultados").innerHTML = ''
+      }
+    })
+})

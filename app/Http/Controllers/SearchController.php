@@ -11,7 +11,7 @@ class SearchController extends Controller
 {
     public function buscador(Request $request)
     {
-      $busqueda = Producto::where("nombre","like",$request->texto."%")->take(10)->get();
-      return view('index', compact('busqueda'));
+      $busquedas = Producto::where("nombre","like",$request->texto."%")->take(6)->get();
+      return view('search', compact('busquedas'));
     }
 }

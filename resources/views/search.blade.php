@@ -1,4 +1,3 @@
-@extends('/layouts/ecommerce')
-@php
-
-@endphp
+<?php foreach ($busquedas as $busqueda): ?>
+  <?php echo $busqueda->nombre ?>
+<?php endforeach; ?>

@@ -12,7 +12,7 @@
 @section('principal')
 
     <div class="banner">
-      <!-- <img src="img/banner.jpg" alt="Laptop"> -->
+      {{-- <img src="img/banner.jpg" alt="Laptop"> --}}
     </div>
     @if (Auth::user())
       @if (Auth::user()->admin > 0)
