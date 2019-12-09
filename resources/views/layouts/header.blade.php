@@ -18,9 +18,9 @@
         <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
 
           <div class="input-group">
-            <input type="text" placeholder="¿Que producto buscas?" id="texto" class="form-control border-0 bg-light">
+            <input type="text" placeholder="¿Que producto buscas?" id="texto" class="form-control border-0 bg-light" name= "busqueda">
             <div class="input-group-append">
-              <button name= "busqueda" id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+              <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
             </div>
           </div>
 

@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+  window.addEventListener('load', function () {
   var productos = document.querySelectorAll('div.producto');
   productos.forEach(function (producto) {
     var elementosProducto = producto.children;
@@ -53,7 +53,7 @@ window.addEventListener('load', function(){
     var buscador = document.querySelector('#texto')
     buscador.addEventListener('keyup', function(){
       if(this.value.length >= 3){
-      fetch(`/search?texto=${this.value}`, {
+      fetch(`/search?busqueda=${this.value}`, {
         method:'get'
       })
       .then(function(response) {
@@ -67,4 +67,9 @@ window.addEventListener('load', function(){
         document.getElementById("resultados").innerHTML = ''
       }
     })
+})
+
+window.addEventListener('load', function () {
+  var imagenes = document.querySelector('.imgProducto');
+  console.log(imagenes.children);
 })
