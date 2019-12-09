@@ -1,5 +1,9 @@
 div.relleno {
-  height: 10vh;
+  height: 13vh;
+}
+
+div.producto {
+  position: relative;
 }
 
 div.imagenes {
@@ -15,12 +19,17 @@ div.imagenes {
 div.imagenes img {
   max-height: 210px;
   width: auto;
+  max-width: 100%;
 }
 
 div.marca {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 div.marca-img {
@@ -51,4 +60,47 @@ div.marca-img img {
   z-index: 10;
   background-color: rgba(227,127,107,0.1);
   border: none;
+}
+
+/* RELACIONADO */
+
+div.relacionado {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.relacionado div.marca-relacionado {
+  width: 10%;
+  position: absolute;
+  right: 0;
+  top:0;
+}
+
+div.relacionado div.marca-relacionado img {
+  width: 100%;
+}
+
+div.relacionado div.img-relacionado {
+  height: 210px;
+  width: 100%;
+}
+
+div.relacionado div.img-relacionado img {
+  max-height: 100%;
+}
+
+div.relacionado div.texto-relacionado {
+  text-align: center;
+}
+
+div.relacionado div.texto-relacionado p {
+  color: slategray;
+  font-size: 1.3em;
 }

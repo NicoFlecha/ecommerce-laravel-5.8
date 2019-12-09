@@ -97,6 +97,7 @@ class ProductoController extends Controller
     public function mostrarProducto($id)
     {
       $producto = Producto::find($id);
-      return view('verProducto', compact('producto'));
+      $relacionados = Producto::where('marca_id','=',$producto->marca_id)->where('id','<>',$producto->id)->get();
+      return view('verProducto', compact('producto','relacionados'));
     }
 }
