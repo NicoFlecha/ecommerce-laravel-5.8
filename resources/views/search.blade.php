@@ -1,6 +1,6 @@
 @extends('/layouts/ecommerce')
 @section('title')
-  Home
+  Se busco {{$busqueda}}
 @endsection
 
 @section('css')
@@ -11,7 +11,7 @@
 
 @section('principal')
 
-  <div class="productos">
+  <div class="productos productosBusc">
 @forelse ($busquedas as $busqueda)
   <div class="producto">
     <button type="button" class="anterior controlador-anterior"><i class="fas fa-arrow-left"></i></button>

@@ -17,6 +17,10 @@ div.productos {
   flex-wrap: wrap;
 }
 
+div.productosBusc {
+  padding-top: 10%
+}
+
 a.linkProducto {
   display: flex;
   flex-direction: column;
