@@ -31,4 +31,8 @@ window.addEventListener('load', function () {
     imagenes[contador].style.display = 'block';
     console.log(contador)
   }
+  if (imagenes.length == 1) {
+    anteriorBtn.style.display = 'none';
+    siguienteBtn.style.display = 'none';
+  }
 })
