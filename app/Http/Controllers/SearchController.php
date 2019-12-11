@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Producto;
 use App\Categoria;
+use App\Imagen;
 
 class SearchController extends Controller
 {
@@ -14,4 +15,13 @@ class SearchController extends Controller
       $busquedas = Producto::where("nombre","like",'%' . $request->busqueda . '%')->take(6)->get();
       return view('search', compact('busquedas'));
     }
+
+    public function buscadorApi($busqueda)
+    {
+      $busquedas = Producto::where("nombre","like",'%' . $busqueda . '%')->take(6)->with('imagenes')->get();
+
+      return json_encode($busquedas);
+
+    }
+
 }
