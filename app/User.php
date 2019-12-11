@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Producto;
+use App\Carrito;
 
 class User extends Authenticatable
 {
@@ -42,4 +43,5 @@ class User extends Authenticatable
     {
       return $this->belongsToMany(Producto::class, 'carritos', 'usuario_id', 'producto_id');
     }
+    
 }

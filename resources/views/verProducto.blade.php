@@ -26,6 +26,12 @@
     <h1>{{$producto->nombre}}</h1>
     <h3>$ {{$producto->precio}}</h3>
     <p>{{$producto->descripcion}}</p>
+    <form class="" action="/agregarCarrito" method="post">
+      @csrf
+      <input type="text" name="producto_id" value="{{$producto->id}}">
+      <input type="number" name="cantidad" value="2">
+      <input type="submit">
+    </form>
   </div>
   {{-- @php
     dd($relacionados->all())
