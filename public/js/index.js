@@ -63,8 +63,8 @@ window.addEventListener('load', function(){
       .then(function(data){
         data.forEach(function (producto) {
           // console.log(producto);
-          document.getElementById("resultados").innerHTML= `<img src=/storage/${producto.imagenes[0].ruta}>`
-          document.getElementById("resultados").innerHTML = producto.nombre
+          document.getElementById("resultados").innerHTML= document.getElementById("resultados").innerHTML +`<img src=/storage/${producto.imagenes[0].ruta}>`
+          document.getElementById("resultados").innerHTML = document.getElementById("resultados").innerHTML + producto.nombre
         })
 
       })
