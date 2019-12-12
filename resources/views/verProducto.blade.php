@@ -23,15 +23,31 @@
         <img src="{{$producto->marca->imagen}}" alt="{{$producto->marca->nombre}}">
       </div>
     </div>
-    <h1>{{$producto->nombre}}</h1>
-    <h3>$ {{$producto->precio}}</h3>
-    <p>{{$producto->descripcion}}</p>
-    <form class="" action="/agregarCarrito" method="post">
-      @csrf
-      <input type="text" name="producto_id" value="{{$producto->id}}">
-      <input type="number" name="cantidad" value="2">
-      <input type="submit">
-    </form>
+    <div class="texto-producto">
+      <h1>{{$producto->nombre}}</h1>
+      <h2>$ {{$producto->precio}}</h3>
+      @if ($producto->cantidad > 1)
+        <p class="stock">Hay Stock</p>
+      @endif
+      <h3>Descripción</h3>
+      <p class="descripcion">{{$producto->descripcion}}</p>
+    </div>
+    @guest
+      <a href="/login"><button type="button" class="agregar" name="button">Agregar al Carrito</button></a>
+    @else
+      <form class="agregar-carrito" action="/agregarCarrito" method="post">
+        @csrf
+        <input type="text" name="producto_id" value="{{$producto->id}}" class="producto_id">
+        <div class="cantidad-container">
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" name="cantidad" id="cantidad" value="1">
+          <button type="button" class="control-cantidad" id="restar">-</button>
+          <button type="button" class="control-cantidad" id="sumar">+</button>
+          <div class="error-cantidad"></div>
+        </div>
+        <button type="submit" class="agregar" name="button">Agregar al Carrito</button>
+      </form>
+    @endguest
   </div>
   {{-- @php
     dd($relacionados->all())

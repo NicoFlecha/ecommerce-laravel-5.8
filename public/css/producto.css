@@ -62,6 +62,96 @@ div.marca-img img {
   border: none;
 }
 
+div.texto-producto {
+  padding: 15px;
+}
+
+div.texto-producto h1 {
+  font-size: 2.3em;
+}
+
+div.texto-producto h2 {
+  font-size: 1.5em;
+}
+
+p.stock {
+  color: #878787;
+}
+
+div.texto-producto h3 {
+  font-size: 1.5em;
+}
+
+p.descripcion {
+  margin-bottom: 0;
+}
+
+div.cantidad-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input#cantidad {
+  height: 30px;
+}
+
+button.control-cantidad {
+  width: 30px;
+  height: 30px;
+}
+
+div.error-cantidad {
+  width: 100%;
+}
+
+
+div.error-cantidad p {
+  color: red;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* AGREGAR AL CARRITO */
+
+form.agregar-carrito input.producto_id {
+  display: none;
+}
+
+form.agregar-carrito div.cantidad-container {
+  width: 90%;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
+
+form.agregar-carrito div.cantidad-container input#cantidad {
+  width: 50%;
+}
+
+form.agregar-carrito div.cantidad-container label[for='cantidad'] {
+  margin-bottom: 0;
+}
+
+form.agregar-carrito button.agregar {
+  width: 90%;
+  background-color: #EBA495;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 5px;
+  height: auto;
+  border: none;
+  margin: 0 auto;
+  display: block;
+}
+
 /* RELACIONADO */
 
 div.relacionado {

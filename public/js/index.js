@@ -13,6 +13,10 @@
       // Al pasar el mouse sobre producto, cambia el display de los botones a block
       anteriorBtn.style.display = 'block';
       siguienteBtn.style.display = 'block';
+      if (arrayElementosDivImagen.length == 1) {
+        anteriorBtn.style.display = 'none';
+        siguienteBtn.style.display = 'none';
+      }
     }
     producto.onmouseout = function () {
       // Al sacar el mouse del producto, cambia el display de los botones a none

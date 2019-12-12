@@ -27,7 +27,5 @@ class UserController extends Controller
 
       return redirect('/carrito');
 
-      // return redirect('/carrito');
-
     }
 }

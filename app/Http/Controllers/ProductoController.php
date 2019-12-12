@@ -100,4 +100,10 @@ class ProductoController extends Controller
       $relacionados = Producto::where('marca_id','=',$producto->marca_id)->where('id','<>',$producto->id)->get();
       return view('verProducto', compact('producto','relacionados'));
     }
+
+    public function mostrarProductoApi($id)
+    {
+      $producto = Producto::find($id);
+      return json_encode($producto);
+    }
 }

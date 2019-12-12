@@ -12,9 +12,11 @@ class CarritoController extends Controller
 
   public function mostrarProductos()
   {
+
     $productos = Carrito::where('usuario_id', '=', Auth::user()->id)->with('productos')->get();
     // dd($carritos);
     return view('carrito', compact('productos'));
+    
   }
 
 }

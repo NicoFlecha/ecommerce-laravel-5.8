@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/search/{busqueda}', 'SearchController@buscadorApi');
+
+Route::get('productos/{id}', 'ProductoController@mostrarProductoApi');
