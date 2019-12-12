@@ -10,7 +10,7 @@
 
 @section('principal')
   @forelse ($productos as $producto)
-    
+    {{$producto->productos->nombre}}<br>
   @empty
     <div class="contenedorCarrito">
       <h2>Tu Carrito está vacío</h2>
