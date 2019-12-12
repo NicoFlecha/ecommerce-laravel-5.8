@@ -12,18 +12,11 @@ html {
   min-height: 100%;
   position: relative;
 }
-
-body {
-  margin-bottom: 85px;
-}
-
 footer {
-  position: absolute;
+  position: relative;
   bottom:0;
   width: 100%;
 }
-
-
 a {
   text-decoration: none;
 }

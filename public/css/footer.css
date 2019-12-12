@@ -1,39 +1,71 @@
 footer {
-  background-color: white;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-top: 1px rgba(228,127,107,0.2) solid;
-  padding: 20px 10px;
-}
-
-footer div.redes {
-  width: 30%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-footer div.redes a {
-  font-size: 1.5em;
-  color: #E47F6B;
-}
-
-footer div.redes a:hover {
-  color: #D53717;
-}
-
-footer div.legales {
-  color: #E47F6B;
-  font-size: 1.1em;
-}
-
-@media only screen and (min-width: 700px) {
-  footer {
-    padding: 20px 20px;
+    color: #000;
+    background-attachment: fixed;
+    background-color:#FAAE86;
+    background-size: cover;
+    background-position: bottom;
   }
-  footer div.redes {
-    width: 15%;
+  footer p {
+    color: #000;
   }
-}
+ footer a {
+    color: #000;
+  }
+  .social-pet li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .social-pet li a {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    line-height: 35px;
+    background-color: #3a5a95;
+    color: #fff;
+  }
+  .social-pet li:nth-child(2) a {
+    background-color: #57aced;
+    color: #fff;
+  }
+  .social-pet li:nth-child(3) a {
+    background-color: #21A0E0;
+    color: #fff;
+  }
+  .social-pet li:nth-child(4) a {
+    background-color: #6b27b2;
+    color: #fff;
+  }
+  .social-pet li a:hover {
+    background-color: #0141a2;
+    color: #fff;
+  }
+  .social-pet li a:hover i {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+  footer .input-group-addon {
+    background-color: #0141a2;
+    padding: 10px 10px 2px 10px;
+    border-radius: 0 5px 5px 0;
+  }
+  .f-address li {
+    display: inline-block;
+  }
+  .f-address li i {
+    color: #000;
+    font-size: 18px;
+  }
+  .f-address li a {
+    color: #000;
+  }
+  .legales i{
+    color: orange;
+  }
+  .copyright {
+    background-color: #111;
+    padding: 12px 0;
+    font-size:14px;
+  }
