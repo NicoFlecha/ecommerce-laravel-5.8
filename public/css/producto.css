@@ -1,5 +1,5 @@
 div.relleno {
-  height: 13vh;
+  height: 11vh;
 }
 
 div.producto {
@@ -17,9 +17,8 @@ div.imagenes {
 }
 
 div.imagenes img {
-  max-height: 210px;
+  max-height: 180px;
   width: auto;
-  max-width: 100%;
 }
 
 div.marca {
@@ -67,7 +66,7 @@ div.texto-producto {
 }
 
 div.texto-producto h1 {
-  font-size: 2.3em;
+  font-size: 2em;
 }
 
 div.texto-producto h2 {
@@ -193,4 +192,61 @@ div.relacionado div.texto-relacionado {
 div.relacionado div.texto-relacionado p {
   color: slategray;
   font-size: 1.3em;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  div.tablet {
+    display: flex;
+    flex-direction: row;
+  }
+  div.imagenes {
+    width: 55%;
+  }
+  div.derecha {
+    display: flex;
+    flex-direction: row;
+  }
+  div.marca {
+    position: relative;
+    width: 60px;
+  }
+  div.marca div.marca-img {
+    width: 100%;
+  }
+  div.texto-producto {
+    padding: 0 15px;
+  }
+  form.agregar-carrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 10px;
+  }
+  form.agregar-carrito div.cantidad-container {
+    padding: 20px 10px;
+    margin: 0;
+    margin-bottom: 0;
+    width: 40%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  form.agregar-carrito div.form-cantidad {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  form.agregar-carrito button.agregar {
+    width: 40%;
+    height: 55px;
+  }
 }

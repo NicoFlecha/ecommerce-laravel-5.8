@@ -11,26 +11,30 @@
 
 @section('principal')
   <div class="producto">
-    <div class="imagenes">
-      <button type="button" class="control-carrousel" id="anterior"><i class="fas fa-arrow-left"></i></button>
-      @foreach ($producto->imagenes as $imagen)
-        <img class= 'imgProducto' src="/storage/{{$imagen->ruta}}" alt="">
-      @endforeach
-      <button type="button" class="control-carrousel" id="siguiente"><i class="fas fa-arrow-right"></i></button>
-    </div>
-    <div class="marca">
-      <div class="marca-img">
-        <img src="{{$producto->marca->imagen}}" alt="{{$producto->marca->nombre}}">
+    <div class="tablet">
+      <div class="imagenes">
+        <button type="button" class="control-carrousel" id="anterior"><i class="fas fa-arrow-left"></i></button>
+        @foreach ($producto->imagenes as $imagen)
+          <img class= 'imgProducto' src="/storage/{{$imagen->ruta}}" alt="">
+        @endforeach
+        <button type="button" class="control-carrousel" id="siguiente"><i class="fas fa-arrow-right"></i></button>
       </div>
-    </div>
-    <div class="texto-producto">
-      <h1>{{$producto->nombre}}</h1>
-      <h2>$ {{$producto->precio}}</h3>
-      @if ($producto->cantidad > 1)
-        <p class="stock">Hay Stock</p>
-      @endif
-      <h3>Descripción</h3>
-      <p class="descripcion">{{$producto->descripcion}}</p>
+      <div class="derecha">
+        <div class="texto-producto">
+          <h1>{{$producto->nombre}}</h1>
+          <h2>$ {{$producto->precio}}</h3>
+            @if ($producto->cantidad > 1)
+              <p class="stock">Hay Stock</p>
+            @endif
+            <h3>Descripción</h3>
+            <p class="descripcion">{{$producto->descripcion}}</p>
+          </div>
+        <div class="marca">
+          <div class="marca-img">
+            <img src="{{$producto->marca->imagen}}" alt="{{$producto->marca->nombre}}">
+          </div>
+        </div>
+        </div>
     </div>
     @guest
       <a href="/login"><button type="button" class="agregar" name="button">Agregar al Carrito</button></a>
@@ -39,10 +43,12 @@
         @csrf
         <input type="text" name="producto_id" value="{{$producto->id}}" class="producto_id">
         <div class="cantidad-container">
-          <label for="cantidad">Cantidad:</label>
-          <input type="number" name="cantidad" id="cantidad" value="1">
-          <button type="button" class="control-cantidad" id="restar">-</button>
-          <button type="button" class="control-cantidad" id="sumar">+</button>
+          <div class="form-cantidad">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" name="cantidad" id="cantidad" value="1">
+            <button type="button" class="control-cantidad" id="restar">-</button>
+            <button type="button" class="control-cantidad" id="sumar">+</button>
+          </div>
           <div class="error-cantidad"></div>
         </div>
         <button type="submit" class="agregar" name="button">Agregar al Carrito</button>

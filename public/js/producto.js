@@ -51,34 +51,47 @@ window.addEventListener('load', function () {
       sumarBtn.onclick = function () {
         cantidad.value ++;
         if (cantidad.value > producto.cantidad) {
-          cantidad.value = producto.cantidad;
           // var parrafoError = document.createElement('p');
           // parrafoError.innerText = 'Ya no hay más';
           errorCantidad.innerHTML = '<p>El stock disponible es de ' + producto.cantidad + '</p>'
+        }
+        if (cantidad.value <= producto.cantidad && cantidad.value > 0) {
+          errorCantidad.innerHTML = '';
         }
       };
       restarBtn.onclick = function () {
         cantidad.value --;
-        if (cantidad.value < 1) {
-          cantidad.value = 1;
-        }
-        if (cantidad.value < producto.cantidad) {
+        if (cantidad.value <= producto.cantidad) {
           errorCantidad.innerHTML = '';
+        }
+        if (cantidad.value < 1) {
+          errorCantidad.innerHTML = '<p>La cantidad mínima es de 1 Producto</p>';
         }
       }
       cantidad.onchange = function () {
-        if (cantidad.value < 1) {
-          cantidad.value = 1;
-        }
-        if (cantidad.value < producto.cantidad) {
+        if (cantidad.value <= producto.cantidad) {
           errorCantidad.innerHTML = '';
         }
+        if (cantidad.value < 1) {
+          errorCantidad.innerHTML = '<p>La cantidad mínima es de 1 Producto</p>';
+        }
         if (cantidad.value > producto.cantidad) {
-          cantidad.value = producto.cantidad;
           // var parrafoError = document.createElement('p');
           // parrafoError.innerText = 'Ya no hay más';
-          errorCantidad.innerHTML = '<p>El stock disponible es de ' + producto.cantidad + '</p>'
+          errorCantidad.innerHTML = '<p>El stock disponible es de ' + producto.cantidad + '</p>';
+        }
+      }
+
+      // Validaciones al enviar el Formulario
+      var form = document.querySelector('form.agregar-carrito');
+      form.onsubmit = function (event) {
+        if (cantidad.value > producto.cantidad) {
+          event.preventDefault();
+        }
+        if (cantidad.value < 1) {
+          event.preventDefault();
         }
       }
     })
+
 })
