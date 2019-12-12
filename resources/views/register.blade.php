@@ -9,7 +9,7 @@
 @endsection
 
 @section('principal')
-  <script src="/js/validacionRegistro.js"></script>
+  {{-- <script src="/js/validacionRegistro.js"></script> --}}
   <h1>¡Registrate!</h1>
   <div class="contenedorFormulario">
     <form class="registro" action="/register" method="post" enctype="multipart/form-data">
