@@ -29,6 +29,9 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/perfil/editar', 'PerfilController@editarPerfil');
+Route::post('/perfil/editar', 'PerfilController@actualizar');
+
 Route::get('/carrito', 'CarritoController@mostrarProductos');
 
 Route::get('/search', 'SearchController@buscador');
