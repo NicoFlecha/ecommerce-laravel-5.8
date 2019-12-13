@@ -16,7 +16,16 @@ class CarritoController extends Controller
     $productos = Carrito::where('usuario_id', '=', Auth::user()->id)->with('productos')->get();
     // dd($carritos);
     return view('carrito', compact('productos'));
-    
+
+  }
+
+  public function eliminarProducto(Request $form)
+  {
+
+    $producto = Carrito::find($form->carrito_id);
+    $producto->delete();
+
+    return redirect('/carrito');
   }
 
 }

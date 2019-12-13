@@ -29,6 +29,9 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/perfil/editar', 'PerfilController@editarPerfil');
+Route::post('/perfil/editar', 'PerfilController@actualizar');
+
 Route::get('/carrito', 'CarritoController@mostrarProductos');
 
 Route::get('/search', 'SearchController@buscador');
@@ -70,5 +73,7 @@ Route::post('/marcas/eliminar', 'MarcaController@eliminar')->middleware('admin')
 Route::get('/marcas/{id}', 'MarcaController@mostrarProductos');
 
 Route::post('/agregarCarrito', 'UserController@agregarCarrito');
+
+Route::post('/eliminarCarrito', 'CarritoController@eliminarProducto');
 
 Auth::routes();

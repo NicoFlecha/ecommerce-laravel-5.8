@@ -23,8 +23,12 @@ class UserController extends Controller
       $carrito->producto_id = $producto->producto_id;
       $carrito->usuario_id = Auth::user()->id;
       $carrito->cantidad = $producto->cantidad;
-      $carritos = Carrito::where('usuario_id', '=', Auth::user())->where('producto_id', '=', $producto->producto_id)->get();
-      dd($carritos);
+      $repetido = Carrito::where('usuario_id', '=', Auth::user()->id)->where('producto_id', '=', $producto->producto_id)->get();
+      if (isset($repetido[0])) {
+        $repetido[0]->cantidad = $carrito->cantidad;
+        $repetido[0]->save();
+        return redirect('/carrito');
+      }
       $carrito->save();
 
       return redirect('/carrito');
