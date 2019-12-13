@@ -53,6 +53,31 @@ form.login div.paraIngresar input.ingresar:hover {
   background-color: #D53717;
 }
 
+.datos {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.datos img{
+  width: 10%;
+  margin-right: 26%;
+}
+
+a.editar{
+  font-weight: bold;
+  color: white;
+  background-color: #E47F6B;
+  padding: 15px;
+  border-radius: 15px;
+  }
+div.editar{
+  margin-top: 10px;
+}
+
+.principal{
+      margin-bottom: 39px;
+}
+
 @media only screen and (min-width: 1000px) {
   div.contenedorFormulario {
     width: 50%;
