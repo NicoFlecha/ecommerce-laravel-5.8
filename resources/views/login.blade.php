@@ -1,4 +1,4 @@
-@extends('layouts/ecommerce')
+@extends('layouts/authLayout')
 
 @section('title')
   ¡Inicia Sesión!
