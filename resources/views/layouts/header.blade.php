@@ -73,7 +73,11 @@
           </div>
         </div>
       @endif
+        @if (Auth::user())
       <a class="carrito" href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+        @else
+        <a class="carrito" href="/login"><i class="fas fa-shopping-cart"></i></a>
+        @endif
     </div>
   </nav>
 </header>
