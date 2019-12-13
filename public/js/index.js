@@ -86,18 +86,18 @@ window.addEventListener('load', function(){
     buscador.addEventListener('keyup', function(){
       if(this.value.length >= 3){
       fetch(`/api/search/${this.value}`
-        //,{method:'get'}
      )
       .then(function(response) {
       return response.json();
       })
       .then(function(data){
         data.forEach(function (producto) {
-          // console.log(producto);
-          document.getElementById("resultados").innerHTML= document.getElementById("resultados").innerHTML +`<img src=/storage/${producto.imagenes[0].ruta}>`
           document.getElementById("resultados").innerHTML = document.getElementById("resultados").innerHTML + producto.nombre
+          if(buscador.value.length > 3){
+            document.getElementById("resultados").innerHTML = ''
+            document.getElementById("resultados").innerHTML = document.getElementById("resultados").innerHTML + producto.nombre
+          }
         })
-
       })
     }
       else {
