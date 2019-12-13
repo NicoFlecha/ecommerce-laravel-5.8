@@ -71,4 +71,6 @@ Route::get('/marcas/{id}', 'MarcaController@mostrarProductos');
 
 Route::post('/agregarCarrito', 'UserController@agregarCarrito');
 
+Route::post('/eliminarCarrito', 'CarritoController@eliminarProducto');
+
 Auth::routes();
