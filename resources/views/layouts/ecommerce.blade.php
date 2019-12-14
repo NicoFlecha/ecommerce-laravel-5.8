@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href=@yield('css')>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/icon.png" />
   </head>
   <body>
     @include('layouts/header')
@@ -18,7 +19,9 @@
        @yield('principal')
 
      </section>
-     @include('layouts/footer')
+     @if (Request::url() != 'http://localhost:8000/register' && Request::url() != 'http://localhost:8000/login')
+       @include('layouts/footer')
+     @endif
      <script src="/js/headroom.min.js"></script>
      <script src="/js/jquery-3.4.1.min.js"></script>
      <script src="/js/header.js"></script>
