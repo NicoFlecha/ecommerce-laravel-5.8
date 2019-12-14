@@ -24,13 +24,12 @@
               <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
             </div>
           </div>
-
         </div>
+
+        <div id="resultados"></div>
        </form>
       </div>
 
-      <div id="resultados">
-      </div>
 
       <!-- <a href="#"><i class="fas fa-fire"></i> Productos</a> -->
       <!-- Example split danger button -->
