@@ -1,3 +1,4 @@
+<script src="/js/buscador.js"></script>
 <header id="header">
   <nav class="menuHeader">
     <div class="logo">
