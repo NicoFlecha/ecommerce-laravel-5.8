@@ -1,4 +1,4 @@
-@extends('layouts/authLayout')
+@extends('layouts/ecommerce')
 
 @section('css')
   '/css/register.css'

@@ -19,7 +19,7 @@
        @yield('principal')
 
      </section>
-     @if (Request::url() != 'http://localhost:8000/register' && Request::url() != 'http://localhost:8000/login' && Request::url() != 'http://localhost:8000/perfil')
+     @if (Request::url() != 'http://localhost:8000/register' && Request::url() != 'http://localhost:8000/login' && Request::url() != 'http://localhost:8000/perfil' && Request::url() != 'http://localhost:8000/perfil/editar')
        @include('layouts/footer')
      @endif
      <script src="/js/headroom.min.js"></script>

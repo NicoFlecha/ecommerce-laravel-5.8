@@ -1,4 +1,4 @@
-@extends('layouts/authLayout')
+@extends('layouts/ecommerce')
 
 @section('title')
   Perfil de {{Auth::user()->name}}
