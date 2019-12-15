@@ -29,16 +29,28 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/perfil/editar', 'PerfilController@editarPerfil');
-Route::post('/perfil/editar', 'PerfilController@actualizar');
-
-Route::get('/carrito', 'CarritoController@mostrarProductos');
 
 Route::get('/search', 'SearchController@buscador');
 
+
+Route::get('/carrito', 'CarritoController@mostrarProductos');
+
+Route::post('/eliminarCarrito', 'CarritoController@eliminarProducto');
+
+
 Route::get('/perfil', 'UserController@mostrarPerfil');
 
+Route::post('/agregarCarrito', 'UserController@agregarCarrito');
+
+
+Route::get('/perfil/editar', 'PerfilController@editarPerfil');
+
+Route::post('/perfil/editar', 'PerfilController@actualizar');
+
+
 Route::get('/categorias', 'CategoriaController@mostrar');
+
+Route::get('/categorias/{id}', 'CategoriaController@mostrarProductos');
 
 Route::get('/categorias/editar', 'CategoriaController@elegir')->middleware('admin');
 
@@ -50,15 +62,17 @@ Route::post('/categorias/editar', 'CategoriaController@guardar')->middleware('ad
 
 Route::post('/categorias/eliminar', 'CategoriaController@eliminar')->middleware('admin');
 
+
+Route::get('/productos/{id}', 'ProductoController@mostrarProducto');
+
 Route::get('/productos/agregar', 'ProductoController@agregar')->middleware('admin');
 
 Route::post('/productos/agregar', 'ProductoController@guardar')->middleware('admin');
 
-Route::get('/categorias/{id}', 'CategoriaController@mostrarProductos');
-
-Route::get('/productos/{id}', 'ProductoController@mostrarProducto');
 
 Route::get('/marcas', 'MarcaController@mostrar');
+
+Route::get('/marcas/{id}', 'MarcaController@mostrarProductos');
 
 Route::get('/marcas/editar', 'MarcaController@elegir')->middleware('admin');
 
@@ -70,10 +84,5 @@ Route::post('/marcas/editar', 'MarcaController@guardar')->middleware('admin');
 
 Route::post('/marcas/eliminar', 'MarcaController@eliminar')->middleware('admin');
 
-Route::get('/marcas/{id}', 'MarcaController@mostrarProductos');
-
-Route::post('/agregarCarrito', 'UserController@agregarCarrito');
-
-Route::post('/eliminarCarrito', 'CarritoController@eliminarProducto');
 
 Auth::routes();
