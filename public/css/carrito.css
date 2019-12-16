@@ -24,6 +24,15 @@ div.contenedorCarrito div.imgCarrito i {
   font-size: 10em;
 }
 
+div.producto {
+  display: flex;
+  flex-direction: row;
+}
+
+input.producto_id {
+  display: none;
+}
+
 @media only screen and (min-width: 730px) {
   div.contenedorCarrito {
     width: 80%;

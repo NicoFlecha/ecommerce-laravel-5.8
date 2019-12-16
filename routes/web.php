@@ -44,6 +44,8 @@ Route::get('/carrito', 'CarritoController@mostrarProductos');
 
 Route::post('/eliminarCarrito', 'CarritoController@eliminarProducto');
 
+Route::post('/comprar', 'CarritoController@comprar');
+
 
 Route::get('/categorias/agregar', 'CategoriaController@agregar')->middleware('admin');
 
