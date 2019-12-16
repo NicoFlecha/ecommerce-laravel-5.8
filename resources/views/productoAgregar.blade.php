@@ -60,6 +60,6 @@
     @error ('imagen')
       {{$message}}<br>
     @enderror
-    <input type="submit" value="Guardar">
+    <input type="submit" value="Guardar" id="guardar">
   </form>
 @endsection
