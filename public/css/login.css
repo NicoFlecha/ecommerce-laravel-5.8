@@ -59,8 +59,10 @@ form.login div.paraIngresar input.ingresar:hover {
   width: 100%;
 }
 .datos img{
-  width: 10%;
+  width: 140px;
+  height: 140px;
   margin-right: 26%;
+  margin-left: 5%;
 }
 
 a.editar{

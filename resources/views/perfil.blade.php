@@ -16,14 +16,12 @@
 @section('principal')
 <div class="datos">
   @php
-    $avatar = 'default.png';
-    if (Auth::user()->avatar) {
-      $avatar = Auth::user()->avatar;
-    }
+
   @endphp
-  <img src="/storage/{{$avatar}}">
+  <img src= @if(Auth::user()->avatar) '/storage/{{Auth::user()->avatar}}' @else '/img/default.png' @endif" alt="Foto de {{Auth::user()->name}}">
   <div class="">
-    <h1>{{$nombre}}-{{$apellido}}</h1>
+    <h1>{{$nombre}} {{$apellido}}</h1>
+    <h2>Username:{{$userName}}</h2>
     <p>{{$email}}</p>
   </div>
 </div>
