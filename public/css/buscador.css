@@ -17,6 +17,13 @@ div#resultados div.resultado img.resultado-img {
   width: 40px;
 }
 
+@media (min-width: 768px) {
+  div#resultados {
+    width: 50%;
+    left: 25%;
+  }
+}
+
 @media (min-width: 769px) {
   .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
     width: 200px;
@@ -26,22 +33,32 @@ div#resultados div.resultado img.resultado-img {
 
 @media (min-width: 850px) {
   .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
-    width: 280px;
+    width: 250px;
     margin-left: 70%;
+  }
+  div#resultados {
+    width: 40%;
+    left: 5%;
   }
 }
 
 @media (min-width: 950px) {
   .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
-    width: 350px;
-    margin-left: 120%;
+    width: 310px;
+    margin-left: 110%;
+  }
+  div#resultados {
+    left: 9%;
   }
 }
 
 @media (min-width: 1050px) {
   .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
-    width: 430px;
-    margin-left: 140%;
+    width: 400px;
+    margin-left: 115%;
+  }
+  div#resultados {
+    left: 12%;
   }
 }
 
@@ -50,6 +67,9 @@ div#resultados div.resultado img.resultado-img {
     width: 450px;
     margin-left: 150%;
   }
+  div#resultados {
+    left: 14%;
+  }
 }
 
 @media (min-width: 1300px) {
@@ -57,10 +77,17 @@ div#resultados div.resultado img.resultado-img {
     width: 500px;
     margin-left: 250%;
   }
+  div#resultados {
+    left: 18%;
+  }
 }
 
 @media (min-width: 1400px) {
   .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
     margin-left: 400%;
+  }
+  div#resultados {
+    width: 20%;
+    left: 30%;
   }
 }
