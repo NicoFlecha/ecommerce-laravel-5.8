@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-'/css/categoriaEditar.css'
+'/css/categoriaEditar.css'x
 @endsection
 
 @section('principal')

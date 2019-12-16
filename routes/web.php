@@ -30,7 +30,14 @@ Route::get('/register', function () {
 });
 
 
-Route::get('/search', 'SearchController@buscador');
+
+Route::get('/perfil', 'UserController@mostrarPerfil');
+
+Route::get('/perfil/editar', 'PerfilController@editarPerfil');
+
+Route::post('/perfil/editar', 'PerfilController@actualizar');
+
+Route::post('/agregarCarrito', 'UserController@agregarCarrito');
 
 
 Route::get('/carrito', 'CarritoController@mostrarProductos');
@@ -38,51 +45,43 @@ Route::get('/carrito', 'CarritoController@mostrarProductos');
 Route::post('/eliminarCarrito', 'CarritoController@eliminarProducto');
 
 
-Route::get('/perfil', 'UserController@mostrarPerfil');
-
-Route::post('/agregarCarrito', 'UserController@agregarCarrito');
-
-
-Route::get('/perfil/editar', 'PerfilController@editarPerfil');
-
-Route::post('/perfil/editar', 'PerfilController@actualizar');
-
-
-Route::get('/categorias', 'CategoriaController@mostrar');
-
-Route::get('/categorias/{id}', 'CategoriaController@mostrarProductos');
+Route::get('/categorias/agregar', 'CategoriaController@agregar')->middleware('admin');
 
 Route::get('/categorias/editar', 'CategoriaController@elegir')->middleware('admin');
 
 Route::get('/categorias/editar/{id}', 'CategoriaController@editar')->middleware('admin');
 
-Route::get('/categorias/agregar', 'CategoriaController@agregar')->middleware('admin');
-
 Route::post('/categorias/editar', 'CategoriaController@guardar')->middleware('admin');
 
 Route::post('/categorias/eliminar', 'CategoriaController@eliminar')->middleware('admin');
 
+Route::get('/categorias', 'CategoriaController@mostrar');
 
-Route::get('/productos/{id}', 'ProductoController@mostrarProducto');
+Route::get('/categorias/{id}', 'CategoriaController@mostrarProductos');
+
 
 Route::get('/productos/agregar', 'ProductoController@agregar')->middleware('admin');
 
 Route::post('/productos/agregar', 'ProductoController@guardar')->middleware('admin');
 
+Route::get('/productos/{id}', 'ProductoController@mostrarProducto');
 
-Route::get('/marcas', 'MarcaController@mostrar');
+Route::get('/search', 'SearchController@buscador');
 
-Route::get('/marcas/{id}', 'MarcaController@mostrarProductos');
+
+Route::get('/marcas/agregar', 'MarcaController@agregar')->middleware('admin');
 
 Route::get('/marcas/editar', 'MarcaController@elegir')->middleware('admin');
 
 Route::get('/marcas/editar/{id}', 'MarcaController@editar')->middleware('admin');
 
-Route::get('/marcas/agregar', 'MarcaController@agregar')->middleware('admin');
-
 Route::post('/marcas/editar', 'MarcaController@guardar')->middleware('admin');
 
 Route::post('/marcas/eliminar', 'MarcaController@eliminar')->middleware('admin');
+
+Route::get('/marcas', 'MarcaController@mostrar');
+
+Route::get('/marcas/{id}', 'MarcaController@mostrarProductos');
 
 
 Auth::routes();
