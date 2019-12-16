@@ -39,6 +39,14 @@ nav.menuHeader div.logo i{
   color: #E47F6B;
 }
 
+div.buscador {
+  width: 65%;
+}
+
+.mb-4, .my-4 {
+  margin-bottom: 0!important;
+}
+
 nav.menuHeader div.enlaces {
   display: flex;
   flex-direction: row;

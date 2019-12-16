@@ -7,6 +7,23 @@
           <img src="/img/logo.png" alt="Logo">
         </a>
       </div>
+
+      <div class="buscador">
+        <form action="/search" method="get">
+          <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+
+            <div class="input-group">
+              <input type="text" placeholder="¿Que producto buscas?" id="texto" class="form-control border-0 bg-light" name= "busqueda">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div id="resultados"></div>
+        </form>
+      </div>
+
       <a id="btn-menu" class="iconoContenedor" href="#">
         <i class="icono fas fa-bars"></i>
       </a>
@@ -14,21 +31,6 @@
 
 
      <div class="enlaces" id="enlaces">
-      <div class="col-lg-4 mx-auto">
-       <form action="/search" method="get">
-        <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
-
-          <div class="input-group">
-            <input type="text" placeholder="¿Que producto buscas?" id="texto" class="form-control border-0 bg-light" name= "busqueda">
-            <div class="input-group-append">
-              <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <div id="resultados"></div>
-       </form>
-      </div>
 
 
       <!-- <a href="#"><i class="fas fa-fire"></i> Productos</a> -->

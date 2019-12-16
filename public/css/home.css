@@ -8,6 +8,20 @@ div.banner {
   background-repeat: no-repeat;
 }
 
+div.stock {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 5px;
+}
+
 div.productos {
   width: 100%;
   padding: 0 10%;

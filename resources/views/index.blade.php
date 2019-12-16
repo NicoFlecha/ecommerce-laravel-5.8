@@ -50,6 +50,11 @@
             </div>
             </a>
         <button type="button" class="siguiente controlador-siguiente"><i class="fas fa-arrow-right"></i></button>
+      @if ($producto->cantidad == 0)
+        <div class="stock">
+          Sin Stock
+        </div>
+      @endif
       </div>
     @empty
       <p>No hay Productos</p>

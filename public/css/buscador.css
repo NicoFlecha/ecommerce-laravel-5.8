@@ -1,16 +1,66 @@
 div#resultados {
   position: absolute;
-  top: 45px;
-  /* left: 20px; */
+  top: 65px;
+  left: 10%;
   padding: 20px 10px;
   background-color: rgba(255,255,255,0.9);
   border-radius: 30px;
+  width: 80%;
 }
 
 div#resultados div.resultado {
   width: 100%;
+  text-align: center;
 }
 
 div#resultados div.resultado img.resultado-img {
-  width: 10px;
+  width: 40px;
+}
+
+@media (min-width: 769px) {
+  .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
+    width: 200px;
+    margin-left: 55%;
+  }
+}
+
+@media (min-width: 850px) {
+  .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
+    width: 280px;
+    margin-left: 70%;
+  }
+}
+
+@media (min-width: 950px) {
+  .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
+    width: 350px;
+    margin-left: 120%;
+  }
+}
+
+@media (min-width: 1050px) {
+  .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
+    width: 430px;
+    margin-left: 140%;
+  }
+}
+
+@media (min-width: 1150px) {
+  .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
+    width: 450px;
+    margin-left: 150%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
+    width: 500px;
+    margin-left: 250%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
+    margin-left: 400%;
+  }
 }

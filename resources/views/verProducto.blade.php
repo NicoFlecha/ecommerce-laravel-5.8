@@ -23,8 +23,12 @@
         <div class="texto-producto">
           <h1>{{$producto->nombre}}</h1>
           <h2>$ {{$producto->precio}}</h3>
-            @if ($producto->cantidad > 1)
+            @if ($producto->cantidad == 1)
+              <p class="stock ultimo">¡Último Disponible!</p>
+            @elseif ($producto->cantidad > 1)
               <p class="stock">Hay Stock</p>
+            @else
+              <p class="stock sin">Sin Stock</p>
             @endif
             <h3>Descripción</h3>
             <p class="descripcion">{{$producto->descripcion}}</p>

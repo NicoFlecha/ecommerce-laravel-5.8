@@ -74,7 +74,16 @@ div.texto-producto h2 {
 }
 
 p.stock {
-  color: #878787;
+  color: green;
+  font-weight: bold;
+}
+
+p.stock.sin {
+  color:red;
+}
+
+p.stock.ultimo {
+  color:orangered;
 }
 
 div.texto-producto h3 {
