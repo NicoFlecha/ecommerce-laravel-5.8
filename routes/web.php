@@ -39,6 +39,9 @@ Route::post('/perfil/editar', 'PerfilController@actualizar');
 
 Route::post('/agregarCarrito', 'UserController@agregarCarrito');
 
+Route::get('/producto/editar/{id}', 'ProductoController@editar');
+
+Route::post('/producto/editar/{id}', 'ProductoController@actualizar');
 
 Route::get('/carrito', 'CarritoController@mostrarProductos');
 

@@ -108,4 +108,21 @@ class ProductoController extends Controller
       $producto = Producto::find($id);
       return json_encode($producto);
     }
+
+    public function editar($id)
+    {
+      $producto = Producto::find($id);
+      return view('productoEditar', compact('producto'));
+    }
+
+    public function actualizar(request $req, $id){
+      $producto = Producto::find($id);
+      $producto->nombre = $req->nombre;
+      $producto->precio = $req->precio;
+      $producto->descripcion = $req->descripcion;
+      $producto->cantidad = $req->cantidad;
+      $producto->save();
+
+      return view('perfil');
+    }
 }

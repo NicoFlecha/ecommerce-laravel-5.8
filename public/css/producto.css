@@ -203,6 +203,20 @@ div.relacionado div.texto-relacionado p {
   font-size: 1.3em;
 }
 
+a.editar{
+  float: right;
+      font-weight: bold;
+      color: white;
+      background-color: #E47F6B;
+      padding: 15px;
+      border-radius: 15px;
+  }
+
+div.editar{
+  overflow: hidden;
+  margin: 2%;
+}
+
 
 /* MEDIA QUERIES */
 
