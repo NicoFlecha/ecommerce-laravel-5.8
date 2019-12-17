@@ -58,6 +58,14 @@
         <button type="submit" class="agregar" name="button">Agregar al Carrito</button>
       </form>
     @endguest
+    @if (Auth::user())
+     @if (Auth::user()->admin > 0)
+       <div class="editar">
+         <a class="editar" href="/producto/editar/{{$producto->id}}">Editar Producto</a>
+       </div>
+     @endif
+    @endif
+
   </div>
   {{-- @php
     dd($relacionados->all())
