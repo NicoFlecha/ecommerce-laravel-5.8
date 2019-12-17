@@ -13,6 +13,8 @@
 
 Route::get('/', 'ProductoController@mostrar');
 
+Route::post('/', 'EmailController@suscripcionNewsletter');
+
 Route::get('/faq', function () {
     return view('faq');
 });
@@ -29,15 +31,14 @@ Route::get('/register', function () {
     return view('register');
 });
 
-
-
 Route::get('/perfil', 'UserController@mostrarPerfil');
+
+Route::post('/agregarCarrito', 'UserController@agregarCarrito');
+
 
 Route::get('/perfil/editar', 'PerfilController@editarPerfil');
 
 Route::post('/perfil/editar', 'PerfilController@actualizar');
-
-Route::post('/agregarCarrito', 'UserController@agregarCarrito');
 
 
 Route::get('/carrito', 'CarritoController@mostrarProductos');
@@ -67,6 +68,7 @@ Route::get('/productos/agregar', 'ProductoController@agregar')->middleware('admi
 Route::post('/productos/agregar', 'ProductoController@guardar')->middleware('admin');
 
 Route::get('/productos/{id}', 'ProductoController@mostrarProducto');
+
 
 Route::get('/search', 'SearchController@buscador');
 

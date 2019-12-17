@@ -45,6 +45,7 @@ div.buscador {
 
 .mb-4, .my-4 {
   margin-bottom: 0!important;
+  padding-bottom: 1.5rem;
 }
 
 nav.menuHeader div.enlaces {

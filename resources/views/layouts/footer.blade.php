@@ -38,10 +38,16 @@
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 mt-2 mb-4">
 						<h5 class="mb-4 font-weight-bold">¡SUSCRÍBETE A NUESTRO NEWSLETTER!</h5>
-						<div class="input-group">
-						  	<input type="text" class="form-control" placeholder="Ingrese su e-mail">
-						  	<span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>
-						</div>
+							<form class="" action="/" method="post">
+								{{ csrf_field() }}
+								<div class="input-group">
+						  	  <input type="text" name="emailAEnviar" class="form-control" placeholder="Ingrese su e-mail">
+						  	  <button class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></button>
+							  </div>
+								@error ('emailAEnviar')
+									{{$message}}<br>
+								@enderror
+							</form>
 						<ul class="social-pet mt-4">
 							<li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
