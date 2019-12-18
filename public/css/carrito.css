@@ -1,15 +1,5 @@
-.principal p{
-  box-shadow: 0 0 15px #ddd;
-    border-radius: 8px;
-}
-
-
-
-
-
-
 div.relleno {
-  height: 15vh;
+  height: 10vh;
 }
 
 div.contenedorCarrito {
@@ -37,20 +27,137 @@ div.contenedorCarrito div.imgCarrito i {
 div.producto {
   display: flex;
   flex-direction: row;
+  background-color: #F9F9F9;
+  border-radius: 20px;
+  padding: 15px;
+  width: 90%;
+  margin: 15px auto;
+  box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.5);
+  position: relative;
 }
 
-input.producto_id {
-  display: none;
+div.producto div.img-producto {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  align-items: center;
 }
 
-@media only screen and (min-width: 730px) {
+div.producto div.img-producto img {
+  width: 100%;
+  max-height: 50%;
+}
+
+div.producto h3.nombre-producto {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+div.producto h3.nombre-producto a {
+  color: #E47F6B;
+}
+
+div.producto h3.nombre-producto a:hover {
+  color: #D53717;
+}
+
+div.producto p {
+  margin-bottom: 0;
+}
+
+div.producto span.subtotal-precio {
+  color: #1B5800;
+  font-weight: bold;
+}
+
+div.producto button.eliminar {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 15px;
+}
+
+div.producto button.eliminar i {
+  color: orangered;
+}
+
+div.producto button.eliminar i:hover {
+  color: red;
+}
+
+div.total {
+  padding: 15px;
+}
+
+div.total p.texto-total {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.total span.precio-total {
+  color: green;
+}
+
+div.total #comprar {
+  background-color: #355834;
+  border: none;
+  width: 95%;
+  margin: 0 auto;
+  padding: 15px;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 425px) {
+  div.producto div.img-producto img {
+    max-height: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   div.contenedorCarrito {
     width: 80%;
   }
+
+  div.producto div.img-producto img {
+    max-height: 80%;
+  }
+
+  div.producto button.eliminar i {
+    font-size: 1.2em;
+  }
+
 }
 
 @media only screen and (min-width: 900px) {
   div.contenedorCarrito {
     width: 65%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  div.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  div.productos {
+    width: 50%;
+  }
+
+  div.productos div.producto div.img-producto img {
+    width: auto;
+    max-height: 100px;
+  }
+
+  div.total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }

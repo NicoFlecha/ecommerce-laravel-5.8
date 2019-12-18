@@ -43,4 +43,14 @@ class CarritoController extends Controller
     return redirect('/');
   }
 
+  public function cantidadProductosApi()
+  {
+
+    dd($_COOKIE);
+    $productos = Carrito::where('usuario_id', '=', Auth::user()->id)->with('productos')->get();
+    // dd($carritos);
+    return view('carrito', compact('productos'));
+
+  }
+
 }
