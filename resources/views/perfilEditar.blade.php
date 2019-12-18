@@ -12,7 +12,7 @@
       @csrf
       <div class="inputForm username">
         <label for="username">Username:</label>
-        <input class="form-control @error('username') is-invalid @enderror" type="text" name="username" id="username" placeholder="" value="{{ old('username') }}">
+        <input class="form-control @error('username') is-invalid @enderror" type="text" name="username" id="username" placeholder="username" value="{{ old('username') }}">
         <div class="invalid-feedback">
           @error('username')
               {{$message}}
@@ -22,7 +22,7 @@
 
       <div class="inputForm email">
         <label for="email">Email:</label>
-        <input class="form-control @error('email') is-invalid @enderror" type="email" name="email" id="email" placeholder="sarasa@sarasa.com" value="{{ old('email') }}">
+        <input class="form-control @error('email') is-invalid @enderror" type="email" name="email" id="email" placeholder="sarasa@sarasa.com" value="{{Auth::user()->email}}">
         <div class="invalid-feedback">
           @error('email')
               {{$message}}
