@@ -123,6 +123,6 @@ class ProductoController extends Controller
       $producto->cantidad = $req->cantidad;
       $producto->save();
 
-      return view('perfil');
+      return redirect('/');
     }
 }
