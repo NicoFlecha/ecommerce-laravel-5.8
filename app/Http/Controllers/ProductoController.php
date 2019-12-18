@@ -125,4 +125,9 @@ class ProductoController extends Controller
 
       return redirect('/');
     }
+
+    public function eliminarFoto(Request $imagen)
+    {
+      dd($imagen);
+    }
 }

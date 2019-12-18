@@ -1,12 +1,16 @@
 @extends('layouts/ecommerce')
 
+@section('title')
+  Editar Producto
+@endsection
+
 @section('css')
   '/css/register.css'
 @endsection
 
 @section('principal')
 
-<h1>Edita tu perfil</h1>
+<h1>Edita el Producto</h1>
 <div class="contenedorFormulario">
 <form class="registro" action="/producto/editar/{{$producto->id}}" method="post" enctype="multipart/form-data">
   @csrf
@@ -31,6 +35,20 @@
   @error ('cantidad')
     {{$message}}<br>
   @enderror
+  <div class="imagenes" style="display:none; flex-direction:row">
+    @foreach($producto->imagenes as $imagen)
+      <div class="form-eliminar-imagen">
+        <form action="/eliminarFoto" method="post">
+          @csrf
+          <input type="hidden" name="imagen_id" value="{{$imagen->id}}">
+          <input type="submit" value="eliminar">
+        </form>
+      </div>
+      <div class="imagen">
+        <img src="/storage/{{$imagen->ruta}}" alt="" width="200px">
+      </div>
+    @endforeach
+  </div>
   <div class="paraEnviar">
     <input class="enviar" type="submit" value='Actualizame'>
   </div>
