@@ -95,5 +95,9 @@ Route::get('/marcas/{id}', 'MarcaController@mostrarProductos');
 
 Route::post('/eliminarFoto', 'ProductoController@eliminarFoto');
 
+Route::get('/gracias', function () {
+    return view('gracias');
+});
+
 
 Auth::routes();

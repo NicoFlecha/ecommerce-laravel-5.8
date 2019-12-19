@@ -1,0 +1,13 @@
+section.principal {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/img/gracias.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    font-size: 5em;
+}

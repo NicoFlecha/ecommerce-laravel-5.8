@@ -40,7 +40,7 @@ class CarritoController extends Controller
       // dd($carrito);
       $carrito->delete();
     }
-    return redirect('/');
+    return redirect('/gracias');
   }
 
   public function cantidadProductosApi()
