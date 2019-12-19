@@ -51,6 +51,7 @@ footer {
     background-color: #0141a2;
     padding: 10px 10px 2px 10px;
     border-radius: 0 5px 5px 0;
+    color: white;
   }
   .f-address li {
     display: inline-block;

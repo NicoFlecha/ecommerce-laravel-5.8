@@ -21,7 +21,7 @@
 									<div class="col-1"><i class="far fa-envelope"></i></div>
 									<div class="col-10">
 										<h6 class="font-weight-bold mb-0">¿Tienes preguntas? ¡CONTÁCTANOS!</h6>
-										<p><a href="#">cosme@cosme.com</a></p>
+										<p><a href="#">fueguitosa@gmail.com</a></p>
 									</div>
 								</div>
 							</li>
@@ -30,7 +30,7 @@
 									<div class="col-1"><i class="fas fa-phone-volume"></i></div>
 									<div class="col-10">
 										<h6 class="font-weight-bold mb-0">Teléfono:</h6>
-										<p><a href="#">+54 1199999999</a></p>
+										<p><a href="#">+54 1167344207</a></p>
 									</div>
 								</div>
 							</li>
@@ -49,7 +49,7 @@
 								@enderror
 							</form>
 						<ul class="social-pet mt-4">
-							<li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="{{ url("www.facebook.com") }}" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
 							<li><a href="#" title="linkedin"><i class="fab fa-linkedin"></i></a></li>
 							<li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
