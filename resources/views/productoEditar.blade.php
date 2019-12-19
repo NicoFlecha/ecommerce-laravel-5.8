@@ -35,7 +35,7 @@
   @error ('cantidad')
     {{$message}}<br>
   @enderror
-  <div class="imagenes" style="display:none; flex-direction:row">
+  <!-- <div class="imagenes" style="display:none; flex-direction:row">
     @foreach($producto->imagenes as $imagen)
       <div class="form-eliminar-imagen">
         <form action="/eliminarFoto" method="post">
@@ -48,7 +48,7 @@
         <img src="/storage/{{$imagen->ruta}}" alt="" width="200px">
       </div>
     @endforeach
-  </div>
+  </div> -->
   <div class="paraEnviar">
     <input class="enviar" type="submit" value='Actualizame'>
   </div>
