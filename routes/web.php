@@ -42,10 +42,6 @@ Route::post('/perfil/editar', 'PerfilController@actualizar');
 
 Route::post('/agregarCarrito', 'UserController@agregarCarrito');
 
-Route::get('/producto/editar/{id}', 'ProductoController@editar');
-
-Route::post('/producto/editar/{id}', 'ProductoController@actualizar');
-
 Route::get('/carrito', 'CarritoController@mostrarProductos');
 
 Route::post('/eliminarCarrito', 'CarritoController@eliminarProducto');
@@ -73,6 +69,10 @@ Route::get('/productos/agregar', 'ProductoController@agregar')->middleware('admi
 Route::post('/productos/agregar', 'ProductoController@guardar')->middleware('admin');
 
 Route::get('/productos/{id}', 'ProductoController@mostrarProducto');
+
+Route::get('/producto/editar/{id}', 'ProductoController@editar');
+
+Route::post('/producto/editar/{id}', 'ProductoController@actualizar');
 
 
 Route::get('/search', 'SearchController@buscador');
