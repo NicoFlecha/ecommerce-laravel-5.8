@@ -2,6 +2,11 @@ div.relleno {
   height: 15vh;
 }
 
+section.principal {
+  margin-top: 15vh;
+
+}
+
 h1 {
   text-align: center;
   color: #E47F6B;
@@ -35,7 +40,12 @@ form.login input {
 
 form.login div.paraIngresar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+form.login div.paraIngresar a.no-cuenta {
+  color: gray;
 }
 
 form.login div.paraIngresar input.ingresar {

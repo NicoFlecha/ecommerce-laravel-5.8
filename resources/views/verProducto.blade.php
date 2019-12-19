@@ -71,22 +71,22 @@
     dd($relacionados->all())
   @endphp --}}
   @empty (!$relacionados->all())
-    <div class="relacionados">
-      <h2>Productos Relacionados</h2>
+  <h2 class="relacionados-title">Productos Relacionados</h2>  
+  <div class="relacionados">
       @foreach ($relacionados as $relacionado)
         <div class="relacionado">
-          <div class="marca-relacionado">
-            <img src="{{$relacionado->marca->imagen}}" alt="">
-          </div>
-          <a href="/productos/{{$relacionado->id}}">
-            <div class="img-relacionado">
-              <img src="/storage/{{$relacionado->imagenes()->first()->ruta}}" alt="">
-            </div>
-            <div class="texto-relacionado">
-              <p>{{$relacionado->nombre}}</p>
-            </div>
+          <a class="producto-relacionado" href="/productos/{{$relacionado->id}}">
+              <div class="img-relacionado">
+                  <img src="/storage/{{$relacionado->imagenes()->first()->ruta}}" alt="">
+              </div>
+              <div class="texto-relacionado">
+                  <p>{{$relacionado->nombre}}</p>
+                  <div class="marca-relacionado">
+                      <img src="{{$relacionado->marca->imagen}}" alt="">
+                  </div>
+              </div>
           </a>
-        </div>
+          </div>
       @endforeach
     </div>
   @endempty

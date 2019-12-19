@@ -29,6 +29,7 @@
         </div>
       @enderror
       <div class="paraIngresar">
+        <a href="/register" class="no-cuenta">¿No tenés cuenta?</a>
         <input class="ingresar" type="submit" value="Ingresar">
       </div>
     </form>

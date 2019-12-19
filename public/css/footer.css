@@ -1,15 +1,16 @@
 footer {
-    color: #000;
+    color: white;
     background-attachment: fixed;
-    background-color:#FAAE86;
+    background-color:#E47F6B;
     background-size: cover;
     background-position: bottom;
+    margin-top: 30px;
   }
   footer p {
-    color: #000;
+    color: white;
   }
  footer a {
-    color: #000;
+    color: white;
   }
   .social-pet li {
     display: inline-block;
@@ -55,11 +56,11 @@ footer {
     display: inline-block;
   }
   .f-address li i {
-    color: #000;
+    color: white;
     font-size: 18px;
   }
   .f-address li a {
-    color: #000;
+    color: white;
   }
   .legales i{
     color: orange;

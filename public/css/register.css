@@ -2,6 +2,10 @@ div.relleno {
   height: 15vh;
 }
 
+section.principal {
+  margin-top: 10vh;
+}
+
 h1 {
   text-align: center;
   color: #E47F6B;
