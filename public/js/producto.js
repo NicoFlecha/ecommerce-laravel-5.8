@@ -43,7 +43,7 @@ window.addEventListener('load', function () {
   var restarBtn = document.querySelector('#restar');
 
   var productoId = document.querySelector('input.producto_id').value;
-  fetch(`http://localhost:8000/api/productos/${(productoId)}`)
+  fetch(`/api/productos/${(productoId)}`)
     .then(function (response) {
       return response.json();
     })
