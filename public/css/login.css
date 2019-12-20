@@ -86,11 +86,42 @@ div.editar{
   margin-top: 10px;
 }
 
-.principal{
+.principal {
       margin-bottom: 39px;
+}
+
+div.ingreso-redes {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.ingreso-redes .red {
+  display: inline-block;
+  background-color: white;
+  border: lightgray 1px solid;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  color: gray;
+}
+
+div.ingreso-redes .red img{
+  width: 15px;
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  div.ingreso-redes {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   div.contenedorFormulario {
     width: 50%;
   }
+}

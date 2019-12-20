@@ -34,4 +34,10 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
+    'google' => [
+        'client_id' => '14799514722-n3fcokq6e8ep1176qr272gd5d61noccb.apps.googleusercontent.com',
+        'client_secret' => 'qOIqFitmqyodm4lqm1wq_VnL',
+        'redirect' => 'http://localhost:8000/google/redireccion',
+    ],
+
 ];

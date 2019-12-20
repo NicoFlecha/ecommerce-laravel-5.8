@@ -100,4 +100,8 @@ Route::get('/gracias', function () {
 });
 
 
+Route::get('/login/google', 'Auth\LoginController@redirectToGoogle');
+
+Route::get('/google/redireccion', 'Auth\LoginController@handleGoogleCallback');
+
 Auth::routes();

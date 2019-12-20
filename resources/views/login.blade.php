@@ -32,6 +32,11 @@
         <a href="/register" class="no-cuenta">¿No tenés cuenta?</a>
         <input class="ingresar" type="submit" value="Ingresar">
       </div>
+      <div class="ingreso-redes">
+        <div class="red-container">
+          <a href="/login/google" class="red"><img src="https://www.stickpng.com/assets/images/5a951939c4ffc33e8c148af2.png">Ingresar con Google</a>
+        </div>
+      </div>
     </form>
   </div>
 @endsection
