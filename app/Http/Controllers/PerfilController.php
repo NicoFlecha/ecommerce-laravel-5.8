@@ -16,10 +16,16 @@ class PerfilController extends Controller
 
     public function actualizar(request $req){
       $user= Auth::user();
-      $user->username = $req->username;
+      if ($req->username) {
+        $user->username = $req->username;
+      }
       $user->email = $req->email;
-      $user->password = Hash::make($req->password);
-      $user->avatar = $req->avatar;
+      if ($req->password) {
+        $user->password = Hash::make($req->password);
+      }
+      if ($req->avatar) {
+        $user->avatar = $req->avatar;
+      }
       $user->save();
 
       return view('perfil');

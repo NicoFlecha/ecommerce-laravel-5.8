@@ -1,5 +1,9 @@
 @extends('layouts/ecommerce')
 
+@section('title')
+  Edita tu Perfil
+@endsection
+
 @section('css')
   '/css/register.css'
 @endsection
@@ -12,7 +16,7 @@
       @csrf
       <div class="inputForm username">
         <label for="username">Username:</label>
-        <input class="form-control @error('username') is-invalid @enderror" type="text" name="username" id="username" placeholder="username" value="{{ old('username') }}">
+        <input class="form-control @error('username') is-invalid @enderror" type="text" name="username" id="username" placeholder="username" value="@if(Auth::user()->username) {{ Auth::user()->username }} @endif">
         <div class="invalid-feedback">
           @error('username')
               {{$message}}
